@@ -13,7 +13,6 @@ const useTranslation = (id: string): string => {
     setTranslation(dictionary[id] ?? id);
   }, [locale, defaultLocale, id]);
 
-  console.log(translation);
   return translation;
 };
 
