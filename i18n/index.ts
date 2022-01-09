@@ -1,7 +1,15 @@
 import en from './en';
 import fr from './fr';
 
-const locales = {
+export type id = {
+  [key: string]: string | undefined;
+};
+
+interface locale {
+  [key: string]: id;
+}
+
+const locales: locale = {
   en,
   fr,
 };
