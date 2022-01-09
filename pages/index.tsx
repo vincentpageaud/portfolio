@@ -17,6 +17,12 @@ const Home: NextPage = () => {
         <header className={styles.header}>
           <h1>Vincent Pageaud</h1>
           <h2>{useTranslation('mainTitle')}</h2>
+          <a className={styles.button} href="https://www.linkedin.com/in/vincentpageaud/">
+            LinkedIn
+          </a>
+          <a className={styles.button} href="https://www.malt.fr/profile/vincentpageaud">
+            Malt
+          </a>
         </header>
         <footer className={styles.footer}>This website is coming soon</footer>
       </div>
