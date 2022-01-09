@@ -20,6 +20,7 @@ The technologies I use:
 
 - React 17.0.2
 - Next 12.0.7
+- TypeScript 4.5.4
 
 ## Learn more
 
