@@ -1,6 +1,7 @@
 .background {
   background-image: url(/temp.jpg);
   background-position: center;
+  background-size: cover;
 }
 
 .container {
