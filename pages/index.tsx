@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 import Header from 'components/Header/Header';
+import Portfolio from 'components/Portfolio/Portfolio';
 
 import useTranslation from 'hooks/useTranslation';
 
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Header />
+      <Portfolio />
     </>
   );
 };
