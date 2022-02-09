@@ -1,8 +1,11 @@
+.container{
+  background-image: url('../public/pattern.png');
+}
 .wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6d5b53;
+  background-color: rgba(74, 46, 34, 0.81);
   height: 100vh;
   color: rgb(255, 255, 255);
 }
