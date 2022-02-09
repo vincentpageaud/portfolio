@@ -1,8 +1,8 @@
-.container{
+.wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #8d7c75;
+  background-color: #6d5b53;
   height: 100vh;
   color: rgb(255, 255, 255);
 }
@@ -18,7 +18,7 @@
 .text h1{
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 5em;
-  color: #805804;
+  color: #ad8631;
   margin: 0 2%;
   margin-top: 5%;
 }
@@ -36,6 +36,11 @@
   background-position: center;
   background-size: cover;
   height: 100%;
+}
+.filter{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 45, 42, 0.3);
 }
 
 @media screen and (max-width: 1600px) {
@@ -65,5 +70,22 @@
 @media screen and (max-width: 800px) {
   .text h2{
     font-size: 3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .picture{
+    display: none;
+  }
+  .container{
+    background-image: url('../public/me.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .wrapper{
+    background-color: rgba(53, 45, 42, 0.72);
+  }
+  .text h2{
+    margin-top: 5%;
   }
 }
