@@ -14,6 +14,9 @@ const MyApp: React.ReactNode = ({ Component, pageProps }: AppProps) => {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        tablet: {
+          breakpoint: 0, // <---- Fixes The Issue 🎉
+        },
       }}
       watch={[asPath]}
       containerRef={containerRef}
