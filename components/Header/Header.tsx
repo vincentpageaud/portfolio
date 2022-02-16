@@ -1,11 +1,14 @@
 import useTranslation from 'hooks/useTranslation';
+import use100vh from 'hooks/use100vh';
 
 import styles from '../../styles/Header.module.css';
 
 const Header: React.FC = () => {
+  const height = use100vh();
+
   return (
     <header className={styles.container} data-scroll-section>
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} style={{ height }}>
         <div className={styles.text}>
           <div data-scroll data-scroll-speed="1">
             <h1>Vincent Pageaud</h1>
