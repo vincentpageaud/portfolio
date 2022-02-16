@@ -21,7 +21,7 @@
 .text h1{
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 5em;
-  color: #ad8631;
+  color: #ca9b34;
   margin: 0 4%;
   margin-top: 5%;
 }
@@ -91,5 +91,11 @@
   }
   .text h2{
     margin-top: 5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .text h2{
+    margin-top: 10%;
+    font-size: 2.6em;
   }
 }
