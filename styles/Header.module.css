@@ -20,7 +20,7 @@
 .text h1{
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 5em;
-  color: #ca9b34;
+  color: var(--main-color);
   margin: 0 4%;
   margin-top: 5%;
 }
@@ -28,8 +28,27 @@
   font-size: 8em;
   margin: 0 10%;
   margin-top: -5%;
+  padding-bottom: 15%;
   text-transform: uppercase;
   word-wrap: break-word;
+}
+.buttonWrapper {
+  margin: 0 auto;
+}
+.button {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  margin: 0 auto;
+  padding: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: all ease-in-out 0.3s;
+}
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+  opacity: 75%;
 }
 
 .picture{

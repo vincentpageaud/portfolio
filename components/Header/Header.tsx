@@ -16,6 +16,15 @@ const Header: React.FC = () => {
           <div data-scroll data-scroll-speed="4">
             <h2>{useTranslation('mainTitle')}</h2>
           </div>
+          <div
+            className={styles.buttonWrapper}
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="8"
+            data-scroll-position="left"
+          >
+            <div className={styles.button}>{useTranslation('learnMore')}</div>
+          </div>
         </div>
         <div className={styles.picture} data-scroll data-scroll-speed="10">
           <div className={styles.filter} />
