@@ -1,7 +1,9 @@
 import React from 'react';
 
-const use100vh = (): number => {
-  const [height, setHeight] = React.useState(0);
+type height = string | number;
+
+const use100vh = (): height => {
+  const [height, setHeight] = React.useState<height>('100vh');
 
   React.useEffect(() => {
     setHeight(window.innerHeight);
