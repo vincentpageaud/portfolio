@@ -1,4 +1,8 @@
 .container {
+  display: flex;
   height: 100vh;
   background-color: #dfd1c9;
+  align-items: center;
+  justify-content: center;
+  color: rgb(110, 73, 73);
 }
