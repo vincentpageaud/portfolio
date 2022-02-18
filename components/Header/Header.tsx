@@ -2,6 +2,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 import useTranslation from 'hooks/useTranslation';
 import use100vh from 'hooks/use100vh';
+import LanguageSelector from 'components/LanguageSelector/LanguageSelector';
 
 import styles from '../../styles/Header.module.css';
 
@@ -15,6 +16,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.container} data-scroll-section>
+      <LanguageSelector />
       <div className={styles.wrapper} style={{ height }}>
         <div className={styles.text}>
           <div data-scroll data-scroll-speed="1">
