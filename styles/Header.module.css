@@ -1,5 +1,5 @@
 .container{
-  background-image: url('../public/pattern.png');
+  background-image: url('../public/pattern-header.png');
 }
 .wrapper{
   display: flex;

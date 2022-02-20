@@ -1,6 +1,9 @@
 .container {
-  background-color: #dfd1c9;
+  background-image: url('/pattern-portfolio.png');
   color: #dfd1c9;
+}
+.filter {
+  background-color: rgba(223, 209, 201, 0.6);
 }
 
 .mainTitle {
