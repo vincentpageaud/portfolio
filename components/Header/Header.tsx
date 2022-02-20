@@ -37,8 +37,10 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className={styles.picture} data-scroll data-scroll-speed="10">
-          <div className={styles.filter} />
+        <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
+          <div className={styles.picture}>
+            <div className={styles.filter} />
+          </div>
         </div>
       </div>
     </header>

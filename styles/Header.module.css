@@ -53,8 +53,12 @@
   opacity: 75%;
 }
 
-.picture{
+.pictureWrapper{
   flex: 1;
+  height: 100%;
+
+}
+.picture{
   background-image: url('../public/me.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -81,6 +85,7 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .pictureWrapper,
   .picture{
     display: none;
   }
