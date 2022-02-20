@@ -1,12 +1,13 @@
 .container {
   height: 100vh;
+  background-image: url('/pattern-skills.png');
 }
 
 .mainTitle {
   margin: 0;
   padding: 2.5%;
   font-size: 4em;
-  color: rgb(107, 93, 87)
+  color: rgb(255, 131, 0);
 }
 
 @media screen and (max-width: 1200px) {
