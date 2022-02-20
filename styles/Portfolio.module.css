@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  padding-bottom: 5%;
 }
 
 .card {
