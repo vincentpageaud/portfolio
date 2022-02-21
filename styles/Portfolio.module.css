@@ -23,7 +23,6 @@
 }
 
 .card {
-  width: 40%;
   background-color: rgb(107, 93, 87);
   margin: 10px 0;
   padding: 5% 2.5%;
@@ -37,14 +36,32 @@
 
   .wrapper {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     align-items: center;
   }
+
   .card {
-    width: 80%;
-    margin: 12.5px 0;
+    margin: 25px 0;
   }
   .card:first-child {
     margin-top: 0;
+  }
+}
+
+.isInView .card {
+  animation: 1s anim-lineUp ease-in-out;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
   }
 }
