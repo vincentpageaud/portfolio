@@ -13,11 +13,11 @@ const Portfolio: React.FC = () => {
         </div>
         <div className={styles.wrapper}>
           <Card direction="left" />
-          <Card direction="right" />
+          <Card direction="right" variant="secondary" />
           <Card direction="left" />
-          <Card direction="right" />
+          <Card direction="right" variant="secondary" />
           <Card direction="left" />
-          <Card direction="right" />
+          <Card direction="right" variant="secondary" />
         </div>
       </div>
     </section>

@@ -22,6 +22,10 @@
   padding-bottom: 5%;
 }
 
+.secondaryColor {
+  background-color: var(--secondary-color) !important;
+}
+
 .card {
   background-color: rgb(107, 93, 87);
   margin: 10px 0;
