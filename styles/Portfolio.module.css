@@ -28,6 +28,23 @@
   padding: 5% 2.5%;
   border-radius: 25px;
 }
+.isInView .card {
+  animation: 1s anim-lineUp ease-in-out;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .mainTitle {
@@ -46,22 +63,19 @@
   .card:first-child {
     margin-top: 0;
   }
-}
 
-.isInView .card {
-  animation: 1s anim-lineUp ease-in-out;
-}
-@keyframes anim-lineUp {
-  0% {
-    opacity: 0;
-    scale: 0.5;
-  }
-  50% {
-    opacity: 1;
-    scale: 1.5;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      scale: 0.5;
+    }
+    50% {
+      opacity: 1;
+      scale: 1.2;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
   }
 }
