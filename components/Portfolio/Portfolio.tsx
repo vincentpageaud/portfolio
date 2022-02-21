@@ -1,3 +1,5 @@
+import Card from './components/Card';
+
 import styles from '../../styles/Portfolio.module.css';
 
 const Portfolio: React.FC = () => {
@@ -10,36 +12,12 @@ const Portfolio: React.FC = () => {
           </h1>
         </div>
         <div className={styles.wrapper}>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
-          <div className={styles.card} data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non
-            labore minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere
-            esse!
-          </div>
+          <Card direction="left" />
+          <Card direction="right" />
+          <Card direction="left" />
+          <Card direction="right" />
+          <Card direction="left" />
+          <Card direction="right" />
         </div>
       </div>
     </section>
