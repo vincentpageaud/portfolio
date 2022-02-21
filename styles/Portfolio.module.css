@@ -10,7 +10,7 @@
   margin: 0;
   padding: 2.5%;
   font-size: 4em;
-  color: rgb(107, 93, 87)
+  color: rgb(107, 93, 87);
 }
 
 .wrapper {
@@ -29,8 +29,37 @@
 .card {
   background-color: rgb(107, 93, 87);
   margin: 10px 0;
-  padding: 5% 2.5%;
   border-radius: 25px;
+  overflow: hidden;
+}
+.cardHeader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
+}
+.coverPicture {
+  background-size: cover;
+  height: 200px;
+}
+.logo {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  bottom: -55px;
+  border: 3px solid rgb(107, 93, 87);
+}
+.cardTitle {
+  margin-top: 70px;
+  margin-left: 20px;
+  padding: 0;
+}
+.cardContent {
+  margin: 20px;
 }
 .isInView .card {
   animation: 1s anim-lineUp ease-in-out;
