@@ -5,7 +5,7 @@ import styles from '../../styles/Skills.module.css';
 const Skills: React.FC = () => {
   return (
     <section id="skills" className={styles.container} data-scroll-section>
-      <div>
+      <div className={styles.filter}>
         <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#skills">
           {useTranslation('skills')}
         </h1>
