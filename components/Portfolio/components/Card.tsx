@@ -1,4 +1,5 @@
 import CardHeader from './CardHeader';
+import CardFooter from './CardFooter';
 
 import styles from '../../../styles/Portfolio.module.css';
 
@@ -26,6 +27,7 @@ const Card: React.FC<Props> = ({ direction, variant }) => (
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non labore
         minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere esse!
       </p>
+      <CardFooter tags={['React', 'NodeJS']} />
     </article>
   </div>
 );

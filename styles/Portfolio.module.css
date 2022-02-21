@@ -61,6 +61,18 @@
 .cardContent {
   margin: 20px;
 }
+.tagsWrapper {
+  display: flex;
+  margin: 20px;
+  color: rgb(107, 93, 87);
+  font-size: .9em;
+}
+.tag {
+  background-color: #dfd1c9;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
 .isInView .card {
   animation: 1s anim-lineUp ease-in-out;
 }
