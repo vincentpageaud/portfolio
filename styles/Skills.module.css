@@ -1,6 +1,6 @@
 .container {
   height: 100vh;
-  background-image: url('/pattern-skills.png');
+  background-image: url('/patterns/skills.png');
 }
 .filter {
   background-color: rgba(26, 26, 26, 0.85);
