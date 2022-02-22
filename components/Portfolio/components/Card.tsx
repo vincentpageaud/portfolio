@@ -3,12 +3,18 @@ import CardFooter from './CardFooter';
 
 import styles from '../../../styles/Portfolio.module.css';
 
+interface Datas {
+  name: string;
+  logoUrl: string;
+}
+
 interface Props {
   direction: 'left' | 'right';
   variant?: 'main' | 'secondary';
+  datas: Datas;
 }
 
-const Card: React.FC<Props> = ({ direction, variant }) => (
+const Card: React.FC<Props> = ({ direction, variant, datas }) => (
   <div
     data-scroll
     data-scroll-class={styles.isInView}
@@ -18,8 +24,8 @@ const Card: React.FC<Props> = ({ direction, variant }) => (
   >
     <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
       <CardHeader
-        title="Lorem"
-        url="https://picsum.photos/120/120"
+        title={datas.name}
+        url={datas.logoUrl}
         backgroundUrl="https://picsum.photos/800/600"
         variant={variant}
       />
