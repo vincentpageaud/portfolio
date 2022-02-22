@@ -4,9 +4,9 @@ interface Props {
   tags: string[];
 }
 
-const CardFooter: React.FC<Props> = ({ tags }) => {
+const CardTags: React.FC<Props> = ({ tags }) => {
   return (
-    <footer>
+    <aside>
       <div className={styles.tagsWrapper}>
         {tags.map((tag) => (
           <div className={styles.tag} key={tag}>
@@ -14,8 +14,8 @@ const CardFooter: React.FC<Props> = ({ tags }) => {
           </div>
         ))}
       </div>
-    </footer>
+    </aside>
   );
 };
 
-export default CardFooter;
+export default CardTags;
