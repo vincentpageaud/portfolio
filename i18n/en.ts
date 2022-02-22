@@ -4,6 +4,7 @@ const en: id = {
   mainTitle: 'Full stack developer on Paris',
   learnMore: 'Learn more',
   skills: 'Skills',
+  website: 'Website',
 };
 
 export default en;

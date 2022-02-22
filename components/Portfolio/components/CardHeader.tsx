@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Submenu from 'assets/Submenu';
+import CardSubmenu from './CardSubmenu';
 
 import styles from '../../../styles/Portfolio.module.css';
 
@@ -21,9 +21,7 @@ const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant }) => 
           >
             <Image width={110} height={110} src={url} alt={title} />
           </div>
-          <div className={styles.subMenuIcon}>
-            <Submenu />
-          </div>
+          <CardSubmenu />
         </div>
       </div>
       <h1 className={styles.cardTitle}>{title}</h1>
