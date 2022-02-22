@@ -1,4 +1,4 @@
-import Card from './components/Card';
+import CardsManager from './components/CardsManager';
 
 import styles from '../../styles/Portfolio.module.css';
 
@@ -12,12 +12,7 @@ const Portfolio: React.FC = () => {
           </h1>
         </div>
         <div className={styles.wrapper}>
-          <Card direction="left" />
-          <Card direction="right" variant="secondary" />
-          <Card direction="left" />
-          <Card direction="right" variant="secondary" />
-          <Card direction="left" />
-          <Card direction="right" variant="secondary" />
+          <CardsManager />
         </div>
       </div>
     </section>
