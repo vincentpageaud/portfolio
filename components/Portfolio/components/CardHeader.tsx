@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import styles from '../../../styles/Portfolio.module.css';
 
 interface Props {
@@ -12,12 +14,12 @@ const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant }) => 
     <header>
       <div className={styles.coverPicture} style={{ backgroundImage: `url(${backgroundUrl})` }}>
         <div className={styles.cardHeader}>
-          <img
-            className={styles.logo}
+          <div
+            className={styles.logoWrapper}
             style={{ borderColor: variant === 'secondary' ? 'var(--secondary-color)' : '' }}
-            src={url}
-            alt={title}
-          />
+          >
+            <Image width={110} height={110} src={url} alt={title} />
+          </div>
         </div>
       </div>
       <h1 className={styles.cardTitle}>{title}</h1>
