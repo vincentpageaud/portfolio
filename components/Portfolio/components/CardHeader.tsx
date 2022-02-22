@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Submenu from 'assets/Submenu';
 
 import styles from '../../../styles/Portfolio.module.css';
 
@@ -19,6 +20,9 @@ const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant }) => 
             style={{ borderColor: variant === 'secondary' ? 'var(--secondary-color)' : '' }}
           >
             <Image width={110} height={110} src={url} alt={title} />
+          </div>
+          <div className={styles.subMenuIcon}>
+            <Submenu />
           </div>
         </div>
       </div>
