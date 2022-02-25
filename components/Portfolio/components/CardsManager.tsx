@@ -1,8 +1,9 @@
 import Card from './Card';
 import portfolioConf from 'configurations/portfolio';
+import { PortfolioModel } from 'models/PortfolioModel';
 
 const CardsManager: React.FC = () => {
-  const cards = Object.values(portfolioConf);
+  const cards = Object.values(portfolioConf) as PortfolioModel[];
 
   return (
     <>
