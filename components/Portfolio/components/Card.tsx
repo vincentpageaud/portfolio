@@ -1,38 +1,35 @@
 import CardHeader from './CardHeader';
 import CardTags from './CardTags';
+import { PortfolioModel } from 'models/PortfolioModel';
 
 import styles from '../../../styles/Portfolio.module.css';
-
-interface Datas {
-  name: string;
-  logoUrl: string;
-  coverUrl: string;
-  tags: string[];
-}
+import useTranslationFromArray from 'hooks/useTranslationFromArray';
 
 interface Props {
   direction: 'left' | 'right';
   variant?: 'main' | 'secondary';
-  datas: Datas;
+  datas: PortfolioModel;
 }
 
-const Card: React.FC<Props> = ({ direction, variant, datas }) => (
-  <div
-    data-scroll
-    data-scroll-class={styles.isInView}
-    data-scroll-direction="horizontal"
-    data-scroll-speed={direction === 'left' ? '3' : '-3'}
-    data-scroll-repeat
-  >
-    <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
-      <CardHeader title={datas.name} url={datas.logoUrl} backgroundUrl={datas.coverUrl} variant={variant} />
-      <CardTags tags={datas.tags} />
-      <p className={styles.cardContent}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae illo ut obcaecati sapiente sit non labore
-        minus aliquid. Consequatur, consectetur et minus asperiores a sunt doloremque nulla explicabo facere esse!
-      </p>
-    </article>
-  </div>
-);
+const Card: React.FC<Props> = ({ direction, variant, datas }) => {
+  const { contents } = useTranslationFromArray(datas.description);
+
+  return (
+    <div
+      data-scroll
+      data-scroll-class={styles.isInView}
+      data-scroll-direction="horizontal"
+      data-scroll-speed={direction === 'left' ? '3' : '-3'}
+      data-scroll-repeat
+    >
+      <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
+        <CardHeader title={datas.name} url={datas.logoUrl} backgroundUrl={datas.coverUrl} variant={variant} />
+        <div className={styles.type}>{datas.type}</div>
+        <CardTags tags={datas.tags} />
+        <p className={styles.cardContent}>{contents}</p>
+      </article>
+    </div>
+  );
+};
 
 export default Card;
