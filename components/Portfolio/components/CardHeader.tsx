@@ -1,4 +1,6 @@
 import Image from 'next/image';
+
+import { Links } from 'models/PortfolioModel';
 import CardSubmenu from './CardSubmenu';
 
 import styles from '../../../styles/Portfolio.module.css';
@@ -8,9 +10,10 @@ interface Props {
   url: string;
   backgroundUrl: string;
   variant?: string;
+  links?: Links;
 }
 
-const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant }) => {
+const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant, links }) => {
   return (
     <header>
       <div className={styles.coverPicture} style={{ backgroundImage: `url(${backgroundUrl})` }}>
@@ -21,7 +24,7 @@ const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant }) => 
           >
             <Image width={110} height={110} src={url} alt={title} />
           </div>
-          <CardSubmenu />
+          {links && <CardSubmenu links={links} />}
         </div>
       </div>
       <h1 className={styles.cardTitle}>{title}</h1>

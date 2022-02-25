@@ -23,7 +23,13 @@ const Card: React.FC<Props> = ({ direction, variant, datas }) => {
       data-scroll-repeat
     >
       <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
-        <CardHeader title={datas.name} url={datas.logoUrl} backgroundUrl={datas.coverUrl} variant={variant} />
+        <CardHeader
+          title={datas.name}
+          url={datas.logoUrl}
+          backgroundUrl={datas.coverUrl}
+          variant={variant}
+          links={datas.links}
+        />
         <div className={styles.type}>{datas.type}</div>
         <CardTags tags={datas.tags} />
         <p className={styles.cardContent}>{contents}</p>
