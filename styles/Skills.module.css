@@ -1,6 +1,7 @@
 .container {
-  height: 100vh;
   background-image: url('/patterns/skills.png');
+  position: relative;
+  overflow: hidden;
 }
 .filter {
   background-color: rgba(26, 26, 26, 0.85);
@@ -12,6 +13,32 @@
   padding: 2.5%;
   font-size: 4em;
   color: var(--secondary-color);
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+}
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  color: #f5deb3;
+  width: 40%;
+  padding: 10%;
+}
+
+.canvasWrapper {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  max-height: 1000px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 1200px) {
