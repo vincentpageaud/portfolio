@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Header from 'components/Header/Header';
 import Portfolio from 'components/Portfolio/Portfolio';
 import Skills from 'components/Skills/Skills';
+import ContactMe from 'components/ContactMe/ContactMe';
 
 import useTranslation from 'hooks/useTranslation';
 
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Header />
       <Portfolio />
       <Skills />
+      <ContactMe />
     </>
   );
 };
