@@ -20,38 +20,52 @@ const Skills: React.FC = () => {
           {useTranslation('skills')}
         </h1>
         <div className={styles.contentContainer}>
-          <div className={styles.contentWrapper} data-scroll data-scroll-speed="2">
-            orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-          <div className={styles.contentWrapper} data-scroll data-scroll-speed="4">
-            orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-          <div className={styles.contentWrapper} data-scroll data-scroll-speed="4">
-            orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
-          <div className={styles.contentWrapper} data-scroll data-scroll-speed="2">
-            orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </div>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed="2">
+            <h1>{useTranslation('summary')}</h1>
+            <p>
+              Développeur Freelance passionné, en sortie d&apos;école, j&apos;ai pu acquérir de nombreuses compétences à
+              partir de mes projets d&apos;études, mes capacités autodidactes, ainsi que de mes deux ans dans une
+              entreprise orientée vers le divertissement à bord (Trains, avions, Ferry, etc.). J&apos;ai donc pu
+              travailler avec de nombreux outils afin de réaliser des cartes interactives, lecteurs vidéo et musique,
+              liseuses de presse, etc.
+            </p>
+            <p>
+              J&apos;ai choisi de travailler en tant que Freelance pour développer et acquérir de nouvelles compétences,
+              motivé et méticuleux, je saurais vous apportez mon savoir-faire.
+            </p>
+          </article>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed="4">
+            <h1>Front End</h1>
+            <ul>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+              <li>React</li>
+            </ul>
+          </article>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed="2">
+            <h1>Back End</h1>
+            <ul>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+              <li>NodeJS</li>
+            </ul>
+          </article>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed="4">
+            <h1>CV</h1>
+            <a href="/CV.pdf" download="vincent_pageaud.pdf">
+              Télécharger le CV
+            </a>
+          </article>
         </div>
       </div>
     </section>

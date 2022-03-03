@@ -23,10 +23,27 @@
 }
 .contentWrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   color: #f5deb3;
   width: 40%;
-  padding: 10%;
+  padding: 7.5% 10%;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 1;
+}
+.contentWrapper h1 {
+  color: #fff;
+  font-size: 1.6em;
+}
+.contentWrapper ul {
+  padding-left: 15px;
+}
+.contentWrapper li {
+  list-style-type: '*';
+  padding-left: 5px;
+}
+.contentWrapper a:hover {
+  color: var(--secondary-color);
 }
 
 .canvasWrapper {
@@ -44,5 +61,8 @@
 @media screen and (max-width: 1200px) {
   .mainTitle {
     font-size: 2.5em;
+  }
+  .contentWrapper {
+    width: 100%;
   }
 }

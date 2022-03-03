@@ -5,6 +5,7 @@ const fr: id = {
   learnMore: 'En savoir plus',
   skills: 'Compétences',
   website: 'Site internet',
+  summary: 'Résumé',
 };
 
 export default fr;

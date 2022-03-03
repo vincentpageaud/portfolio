@@ -5,6 +5,7 @@ const en: id = {
   learnMore: 'Learn more',
   skills: 'Skills',
   website: 'Website',
+  summary: 'Summary',
 };
 
 export default en;
