@@ -8,13 +8,6 @@ import styles from '../../styles/Skills.module.css';
 const Skills: React.FC = () => {
   return (
     <section id="skills" className={styles.container} data-scroll-section>
-      <div className={styles.canvasWrapper} data-scroll data-scroll-speed="3">
-        <Canvas>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[-2, 5, 2]} intensity={1} />
-          <AnimatedSphere />
-        </Canvas>
-      </div>
       <div className={styles.filter}>
         <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#skills">
           {useTranslation('skills')}
@@ -34,6 +27,13 @@ const Skills: React.FC = () => {
               motivé et méticuleux, je saurais vous apportez mon savoir-faire.
             </p>
           </article>
+          <div className={styles.canvasWrapper} data-scroll data-scroll-speed="3">
+            <Canvas>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[-2, 5, 2]} intensity={1} />
+              <AnimatedSphere />
+            </Canvas>
+          </div>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed="4">
             <h1>Front End</h1>
             <ul>
