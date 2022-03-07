@@ -65,4 +65,9 @@
   .contentWrapper {
     width: 100%;
   }
+  .canvasWrapper {
+    position: unset;
+    width: 50%;
+    height: 200px;
+  }
 }
