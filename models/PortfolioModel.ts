@@ -1,14 +1,11 @@
+import { Description } from './GenericModel';
+
 export interface Links {
   website?: string;
   git?: {
     host: string;
     url: string;
   };
-}
-
-export interface Description {
-  language?: string;
-  contents?: string;
 }
 
 export interface PortfolioModel {
