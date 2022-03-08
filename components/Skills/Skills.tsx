@@ -1,14 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
 
 import useTranslation from 'hooks/useTranslation';
-import AnimatedSphere from './components/AnimatedSphere';
+import useTranslationFromArray from 'hooks/useTranslationFromArray';
+import List from './components/List';
+import Summary from './components/Summary';
+import CanvasWrapper from './components/CanvasWrapper';
+import skillsConf from 'configurations/skills';
 
 import styles from '../../styles/Skills.module.css';
 
 const Skills: React.FC = () => {
   const [scale, setScale] = useState(1);
   const containerElmnt = useRef<HTMLDivElement>(null);
+
+  const { contents: summaryContent } = useTranslationFromArray(skillsConf.summary);
+  const { url: cvUrl, title: cvTitle } = useTranslationFromArray(skillsConf.cvUrl);
+
+  const isLargeScreen = scale === 1;
 
   const setCanvasScale: (width?: number) => void = (width) => {
     if (width && width > 1200) {
@@ -36,57 +44,22 @@ const Skills: React.FC = () => {
           {useTranslation('skills')}
         </h1>
         <div className={styles.contentContainer}>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={scale === 1 ? '2' : '0.5'}>
-            <h1>{useTranslation('summary')}</h1>
-            <p>
-              Développeur Freelance passionné, en sortie d&apos;école, j&apos;ai pu acquérir de nombreuses compétences à
-              partir de mes projets d&apos;études, mes capacités autodidactes, ainsi que de mes deux ans dans une
-              entreprise orientée vers le divertissement à bord (Trains, avions, Ferry, etc.). J&apos;ai donc pu
-              travailler avec de nombreux outils afin de réaliser des cartes interactives, lecteurs vidéo et musique,
-              liseuses de presse, etc.
-            </p>
-            <p>
-              J&apos;ai choisi de travailler en tant que Freelance pour développer et acquérir de nouvelles compétences,
-              motivé et méticuleux, je saurais vous apportez mon savoir-faire.
-            </p>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
+            {summaryContent && <Summary contents={summaryContent} />}
           </article>
-          <div className={styles.canvasWrapper} data-scroll data-scroll-speed={scale === 1 ? '3' : '0.5'}>
-            <Canvas>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[-2, 5, 2]} intensity={1} />
-              <AnimatedSphere scale={scale} />
-            </Canvas>
+          <div className={styles.canvasWrapper} data-scroll data-scroll-speed={isLargeScreen ? '3' : '0.5'}>
+            <CanvasWrapper scale={scale} />
           </div>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={scale === 1 ? '4' : '0.5'}>
-            <h1>Front End</h1>
-            <ul>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
-            </ul>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
+            <List title="Front End" elements={skillsConf.frontEnd} />
           </article>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={scale === 1 ? '2' : '0.5'}>
-            <h1>Back End</h1>
-            <ul>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-              <li>NodeJS</li>
-            </ul>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
+            <List title="Back End" elements={skillsConf.backEnd} />
           </article>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={scale === 1 ? '4' : '0.5'}>
+          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
             <h1>CV</h1>
-            <a href="/CV.pdf" download="vincent_pageaud.pdf">
-              Télécharger le CV
+            <a href={cvUrl} download="vincent_pageaud.pdf">
+              {cvTitle}
             </a>
           </article>
         </div>
