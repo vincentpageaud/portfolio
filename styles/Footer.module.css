@@ -4,11 +4,6 @@
   background-color: #21386a;
 }
 
-.mapContainer {
-  height: 50%;
-  width: 50%;
-}
-
 .wavesContainer {
   position: relative;
   height: 140px;
