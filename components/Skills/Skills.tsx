@@ -58,7 +58,7 @@ const Skills: React.FC = () => {
           </article>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
             <h1>CV</h1>
-            <a href={cvUrl} download="vincent_pageaud.pdf">
+            <a href={cvUrl} target="_blank" rel="noreferrer">
               {cvTitle}
             </a>
           </article>
