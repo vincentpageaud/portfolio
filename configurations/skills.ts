@@ -48,6 +48,7 @@ const skillsConf = {
     {
       language: 'EN',
       title: 'Download the CV (in French)',
+      url: '/CV.pdf',
     },
     {
       language: 'FR',
