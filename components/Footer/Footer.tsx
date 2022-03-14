@@ -7,6 +7,7 @@ import styles from 'styles/Footer.module.css';
 const Footer: React.FC = () => {
   return (
     <footer className={styles.container} data-scroll-section>
+      <div className={styles.chromeFix} />
       <h1 className={styles.mainTitle}>{useTranslation('contactMe')}</h1>
       <div className={styles.wrapper}>
         <ContactForm />

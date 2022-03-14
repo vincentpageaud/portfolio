@@ -11,6 +11,13 @@
   margin: 0 auto;
 }
 
+.chromeFix {
+  top: -2px;
+  position: relative;
+  background-color: #185275;
+  height: 4px;
+}
+
 .mainTitle {
   margin: 0;
   padding: 2.5%;
@@ -35,7 +42,7 @@
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   resize: none;
   outline: none;
   transition: all 0.3s ease-in-out;
