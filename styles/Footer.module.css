@@ -65,9 +65,10 @@
 .formContainer > input:focus {
   background-color: #ffffff;
 }
-.sendButton {
+.button {
   border-radius: 20px;
   margin-top: 15px;
+  margin-right: 10px;
   padding: 10px 30px;
   font-size: 0.9em;
   cursor: pointer;
@@ -78,8 +79,11 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
-.sendButton:hover {
+.button:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+.button:last-child {
+  margin-right: 0;
 }
 .error {
   color: #ff3b3b;
