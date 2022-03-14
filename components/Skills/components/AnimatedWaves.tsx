@@ -1,4 +1,4 @@
-import styles from 'styles/Footer.module.css';
+import styles from 'styles/Skills.module.css';
 
 const AnimatedWaves: React.FC = () => {
   return (
