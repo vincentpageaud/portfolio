@@ -1,6 +1,4 @@
 .container {
-  position: relative;
-  top: -1px;
   width: 100%;
   background-color: #185275;
   color: rgba(255, 255, 255, 0.8);
@@ -9,6 +7,8 @@
   display: flex;
   padding: 0 2.5%;
   padding-bottom: 5%;
+  max-width: 2600px;
+  margin: 0 auto;
 }
 
 .mainTitle {
@@ -20,12 +20,17 @@
 
 .formContainer {
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   flex: 1;
   padding-right: 2.5%;
 }
+.formContainer > label {
+  width: 100%;
+}
 .formContainer > textarea,
 .formContainer > input {
+  width: 100%;
   margin: 10px 0;
   padding: 10px;
   border-radius: 20px;
@@ -39,6 +44,18 @@
 .formContainer > textarea:focus,
 .formContainer > input:focus {
   background-color: #ffffff;
+}
+.sendButton {
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  font-size: 0.9em;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.error {
+  color: #ff3b3b;
+  transition: all .3s ease-in-out;
 }
 
 .extLinks {
