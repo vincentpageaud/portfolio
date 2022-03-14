@@ -24,7 +24,7 @@ const AnimatedWaves: React.FC = () => {
         <g className={styles.waves}>
           <use xlinkHref="#gentle-wave" x="50" y="0" fill="#21606a" />
           <use xlinkHref="#gentle-wave" x="50" y="3" fill="var(--secondary-color)" />
-          <use xlinkHref="#gentle-wave" x="50" y="6" fill="#21386a" />
+          <use xlinkHref="#gentle-wave" x="50" y="6" fill="#185275" />
         </g>
       </svg>
     </div>
