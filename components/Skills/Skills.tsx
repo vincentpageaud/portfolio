@@ -5,6 +5,7 @@ import useTranslationFromArray from 'hooks/useTranslationFromArray';
 import List from './components/List';
 import Summary from './components/Summary';
 import CanvasWrapper from './components/CanvasWrapper';
+import AnimatedWaves from './components/AnimatedWaves';
 import skillsConf from 'configurations/skills';
 
 import styles from '../../styles/Skills.module.css';
@@ -63,6 +64,7 @@ const Skills: React.FC = () => {
             </a>
           </article>
         </div>
+        <AnimatedWaves />
       </div>
     </section>
   );
