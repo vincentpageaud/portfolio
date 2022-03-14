@@ -6,6 +6,9 @@ const en: id = {
   skills: 'Skills',
   website: 'Website',
   summary: 'Summary',
+  contactMe: 'Contact me',
+  fullName: 'Full name',
+  mailAddress: 'Mail address',
 };
 
 export default en;

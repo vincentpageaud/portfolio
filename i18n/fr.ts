@@ -6,6 +6,9 @@ const fr: id = {
   skills: 'Compétences',
   website: 'Site internet',
   summary: 'Résumé',
+  contactMe: 'Me contacter',
+  fullName: 'Nom complet',
+  mailAddress: 'Adresse mail',
 };
 
 export default fr;
