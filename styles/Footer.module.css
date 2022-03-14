@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #185275;
   color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
 }
 .wrapper {
   display: flex;
@@ -9,6 +10,18 @@
   padding-bottom: 5%;
   max-width: 2600px;
   margin: 0 auto;
+}
+.wrapper hr {
+  border: none;
+  border-left: 5px dotted rgba(255, 255, 255, 0.2);
+}
+.wrapper h1 {
+  width: 100%;
+  font-size: 1.2em;
+  margin: 0;
+  padding-bottom: 30px;
+  font-weight: 400;
+  color: #f5deb3;
 }
 
 .chromeFix {
@@ -84,6 +97,11 @@
   }
   .wrapper {
     flex-direction: column;
+  }
+  .wrapper hr {
+    border: none;
+    width: 90%;
+    border-top: 5px dotted rgba(255, 255, 255, 0.2);
   }
   .formContainer,
   .extLinks {
