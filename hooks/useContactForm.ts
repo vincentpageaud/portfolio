@@ -21,6 +21,7 @@ const useContactForm: () => UseContactForm = () => {
 
   async function sendForm(formDatas: FormDatas): Promise<void> {
     setLoading(true);
+    setError(false);
 
     await axios
       .post('https://nocodeform.io/f/622b49c86ef669d838330ece', formDatas)
