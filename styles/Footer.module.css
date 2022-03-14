@@ -1,4 +1,6 @@
 .container {
+  position: relative;
+  top: -1px;
   width: 100%;
   background-color: #185275;
   color: rgba(255, 255, 255, 0.8);
