@@ -24,7 +24,11 @@ const useContactForm: () => UseContactForm = () => {
     setError(false);
 
     await axios
-      .post('https://nocodeform.io/f/622b49c86ef669d838330ece', formDatas)
+      .post('https://nocodeform.io/f/622b49c86ef669d838330ece', {
+        fullName: formDatas.fullName.trim(),
+        email: formDatas.email.trim(),
+        message: formDatas.message,
+      })
       .then((response) => {
         setLoading(false);
         response.status === 201 ? setError(false) : setError(true);
