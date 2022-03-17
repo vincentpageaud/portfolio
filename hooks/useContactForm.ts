@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { env } from 'process';
 import axios from 'axios';
 
 interface FormDatas {
@@ -23,20 +24,24 @@ const useContactForm: () => UseContactForm = () => {
     setLoading(true);
     setError(false);
 
-    await axios
-      .post('https://nocodeform.io/f/622b49c86ef669d838330ece', {
-        fullName: formDatas.fullName.trim(),
-        email: formDatas.email.trim(),
-        message: formDatas.message,
-      })
-      .then((response) => {
-        setLoading(false);
-        response.status === 201 ? setError(false) : setError(true);
-      })
-      .catch(() => {
-        setLoading(false);
-        setError(true);
-      });
+    if (env.MAIL_API_URL) {
+      await axios
+        .post(env.MAIL_API_URL, {
+          fullName: formDatas.fullName.trim(),
+          email: formDatas.email.trim(),
+          message: formDatas.message,
+        })
+        .then((response) => {
+          setLoading(false);
+          response.status === 201 ? setError(false) : setError(true);
+        })
+        .catch(() => {
+          setLoading(false);
+          setError(true);
+        });
+    } else {
+      console.error('Please set MAIL_API_URL in env');
+    }
   }
 
   return { actions: { sendForm }, loading, error };
