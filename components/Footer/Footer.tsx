@@ -1,6 +1,6 @@
 import useTranslation from 'hooks/useTranslation';
 
-// import ContactForm from './components/ContactForm';
+import ContactForm from './components/ContactForm';
 
 import styles from 'styles/Footer.module.css';
 
@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className={styles.chromeFix} />
       <h1 className={styles.mainTitle}>{useTranslation('contactMe')}</h1>
       <div className={styles.wrapper}>
-        {/* <ContactForm /> */}
+        <ContactForm />
         <hr />
         <div className={styles.extLinks}>
           <h1>{useTranslation('myNetworks')}</h1>

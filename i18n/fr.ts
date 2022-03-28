@@ -12,6 +12,7 @@ const fr: id = {
   mailAddress: 'Adresse mail',
   send: 'Envoyer',
   sending: 'Envoi en cours...',
+  sent: 'Envoyé',
   myNetworks: 'Vous pouvez également me retrouver sur mes réseaux',
   networkError: 'Erreur : Veuillez réessayer ou utiliser mes réseaux.',
 };

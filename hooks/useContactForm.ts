@@ -13,15 +13,23 @@ interface UseContactForm {
   };
   loading: boolean;
   error: boolean;
+  success: boolean;
 }
 
 const useContactForm: () => UseContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   async function sendForm(formDatas: FormDatas): Promise<void> {
     setLoading(true);
     setError(false);
+    setSuccess(false);
+
+    const handleSuccess = (): void => {
+      setError(false);
+      setSuccess(true);
+    };
 
     if (process.env.NEXT_PUBLIC_MAIL_API_URL) {
       await axios
@@ -32,7 +40,7 @@ const useContactForm: () => UseContactForm = () => {
         })
         .then((response) => {
           setLoading(false);
-          response.status === 201 ? setError(false) : setError(true);
+          response.status === 201 ? handleSuccess() : setError(true);
         })
         .catch(() => {
           setLoading(false);
@@ -43,7 +51,7 @@ const useContactForm: () => UseContactForm = () => {
     }
   }
 
-  return { actions: { sendForm }, loading, error };
+  return { actions: { sendForm }, loading, error, success };
 };
 
 export default useContactForm;

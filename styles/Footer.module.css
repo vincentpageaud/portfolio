@@ -85,6 +85,13 @@
 .button:last-child {
   margin-right: 0;
 }
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.disabled:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .error {
   color: #ff3b3b;
   transition: all .3s ease-in-out;

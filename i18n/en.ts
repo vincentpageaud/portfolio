@@ -12,6 +12,7 @@ const en: id = {
   mailAddress: 'Mail address',
   send: 'Send',
   sending: 'Sending...',
+  sent: 'Sent',
   myNetworks: 'You can also find me on my networks',
   networkError: 'Error : Please try again, or use my networks.',
 };
