@@ -47,6 +47,7 @@
 }
 .formContainer > label {
   width: 100%;
+  transition: all .3s ease-in-out;
 }
 .formContainer > textarea,
 .formContainer > input {
@@ -93,7 +94,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 .error {
-  color: #ff3b3b;
+  color: #f55;
   transition: all .3s ease-in-out;
 }
 
