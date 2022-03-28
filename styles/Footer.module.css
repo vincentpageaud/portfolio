@@ -101,6 +101,13 @@
   flex: 1;
   padding-left: 2.5%;
 }
+.extLinks nav {
+  margin-top: 50px;
+}
+.extLinks nav > div {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 1200px) {
   .mainTitle {
