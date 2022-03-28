@@ -13,6 +13,7 @@ const fr: id = {
   send: 'Envoyer',
   sending: 'Envoi en cours...',
   myNetworks: 'Vous pouvez également me retrouver sur mes réseaux',
+  networkError: 'Erreur : Veuillez réessayer ou utiliser mes réseaux.',
 };
 
 export default fr;

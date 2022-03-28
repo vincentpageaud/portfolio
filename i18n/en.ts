@@ -13,6 +13,7 @@ const en: id = {
   send: 'Send',
   sending: 'Sending...',
   myNetworks: 'You can also find me on my networks',
+  networkError: 'Error : Please try again, or use my networks.',
 };
 
 export default en;
