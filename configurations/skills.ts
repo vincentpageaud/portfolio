@@ -53,7 +53,6 @@ const skillsConf = {
     {
       language: 'FR',
       title: 'Télécharger le CV',
-      url: 'http://assets.ctfassets.net/y1m5lh1tnag8/74sNrB6ag378lbUrjX3Ugc/ad2db5942c337abbd7a654feeb9ea41c/Vincent_Pageaud.pdf',
     },
   ],
 };

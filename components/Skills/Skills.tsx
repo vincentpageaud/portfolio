@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
   const containerElmnt = useRef<HTMLDivElement>(null);
 
   const { contents: summaryContent } = useTranslationFromArray(skillsConf.summary);
-  const { url: cvUrl, title: cvTitle } = useTranslationFromArray(skillsConf.cvUrl);
+  const { title: cvTitle } = useTranslationFromArray(skillsConf.cvUrl);
 
   const isLargeScreen = scale === 1;
 
@@ -59,7 +59,7 @@ const Skills: React.FC = () => {
           </article>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
             <h1>CV</h1>
-            <a href={cvUrl} target="_blank" rel="noreferrer">
+            <a href={process.env.CV_URL} target="_blank" rel="noreferrer">
               {cvTitle}
             </a>
           </article>
