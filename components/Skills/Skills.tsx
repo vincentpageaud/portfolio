@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 import useTranslation from 'hooks/useTranslation';
 import useTranslationFromArray from 'hooks/useTranslationFromArray';
@@ -13,6 +14,10 @@ import styles from '../../styles/Skills.module.css';
 const Skills: React.FC = () => {
   const [scale, setScale] = useState(1);
   const containerElmnt = useRef<HTMLDivElement>(null);
+
+  const { scroll } = useLocomotiveScroll();
+
+  const isMobileOrTablet = scroll?.options?.isMobile || scroll?.options?.isTablet;
 
   const { contents: summaryContent } = useTranslationFromArray(skillsConf.summary);
   const { title: cvTitle } = useTranslationFromArray(skillsConf.cvUrl);
@@ -41,7 +46,13 @@ const Skills: React.FC = () => {
   return (
     <section ref={containerElmnt} id="skills" className={styles.container} data-scroll-section>
       <div className={styles.filter}>
-        <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#skills">
+        <h1
+          className={styles.mainTitle}
+          style={{ paddingBottom: isMobileOrTablet ? 0 : 100 }}
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target="#skills"
+        >
           {useTranslation('skills')}
         </h1>
         <div className={styles.contentContainer}>
