@@ -12,6 +12,7 @@ const en: id = {
   mailAddress: 'Mail address',
   send: 'Send',
   sending: 'Sending...',
+  myNetworks: 'You can also find me on my networks',
 };
 
 export default en;
