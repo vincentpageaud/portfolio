@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { env } from 'process';
 import axios from 'axios';
 
 interface FormDatas {
@@ -24,9 +23,9 @@ const useContactForm: () => UseContactForm = () => {
     setLoading(true);
     setError(false);
 
-    if (env.MAIL_API_URL) {
+    if (process.env.NEXT_PUBLIC_MAIL_API_URL) {
       await axios
-        .post(env.MAIL_API_URL, {
+        .post(process.env.NEXT_PUBLIC_MAIL_API_URL as string, {
           fullName: formDatas.fullName.trim(),
           email: formDatas.email.trim(),
           message: formDatas.message,
