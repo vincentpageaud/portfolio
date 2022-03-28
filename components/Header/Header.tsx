@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={styles.container} data-scroll-section>
+    <header id="top" className={styles.container} data-scroll-section>
       <LanguageSelector />
       <div className={styles.wrapper} style={{ height }}>
         <div className={styles.text}>
