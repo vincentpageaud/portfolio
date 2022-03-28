@@ -55,7 +55,8 @@ const ContactForm: React.FC = () => {
         {useTranslation('networkError')}
       </div>
       <div
-        className={`${styles.button} ${isSent || isSending ? styles.disabled : ''}`}
+        // eslint-disable-next-line no-constant-condition
+        className={`${styles.button} ${isSent || isSending || true ? styles.disabled : ''}`}
         onClick={handleSubmit}
         role="button"
         onKeyDown={() => []}
