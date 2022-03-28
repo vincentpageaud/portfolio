@@ -7,8 +7,11 @@ const fr: id = {
   website: 'Site internet',
   summary: 'Résumé',
   contactMe: 'Me contacter',
+  contactForm: 'Formulaire de contact',
   fullName: 'Nom complet',
   mailAddress: 'Adresse mail',
+  send: 'Envoyer',
+  sending: 'Envoi en cours...',
 };
 
 export default fr;
