@@ -122,6 +122,7 @@
 }
 .cardContent {
   margin: 20px;
+  text-align: justify;
 }
 .type {
   margin: 0 20px;
