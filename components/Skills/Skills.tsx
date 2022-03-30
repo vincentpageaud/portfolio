@@ -48,7 +48,7 @@ const Skills: React.FC = () => {
       <div className={styles.filter}>
         <h1
           className={styles.mainTitle}
-          style={{ paddingBottom: isMobileOrTablet ? 0 : 100 }}
+          style={{ paddingBottom: isMobileOrTablet ? 0 : 150 }}
           data-scroll
           data-scroll-sticky
           data-scroll-target="#skills"
@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
           </article>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
             <h1>CV</h1>
-            <a href={process.env.CV_URL} target="_blank" rel="noreferrer">
+            <a href={process.env.NEXT_PUBLIC_CV_URL} target="_blank" rel="noreferrer">
               {cvTitle}
             </a>
           </article>
