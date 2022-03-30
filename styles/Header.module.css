@@ -1,5 +1,6 @@
 .container{
   background-image: url('/patterns/header.png');
+  will-change: transform;
 }
 .wrapper{
   display: flex;
