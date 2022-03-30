@@ -15,31 +15,33 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header id="top" className={styles.container} data-scroll-section>
-      <LanguageSelector />
-      <div className={styles.wrapper} style={{ height }}>
-        <div className={styles.text}>
-          <div data-scroll data-scroll-speed="1">
-            <h1>Vincent Pageaud</h1>
-          </div>
-          <div data-scroll data-scroll-speed="4">
-            <h2>{useTranslation('mainTitle')}</h2>
-          </div>
-          <div
-            className={styles.buttonWrapper}
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="8"
-            data-scroll-position="left"
-          >
-            <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
-              {useTranslation('learnMore')}
+    <header id="top" className={styles.background} data-scroll-section>
+      <div className={styles.container}>
+        <LanguageSelector />
+        <div className={styles.wrapper} style={{ height }}>
+          <div className={styles.text}>
+            <div data-scroll data-scroll-speed="1">
+              <h1>Vincent Pageaud</h1>
+            </div>
+            <div data-scroll data-scroll-speed="4">
+              <h2>{useTranslation('mainTitle')}</h2>
+            </div>
+            <div
+              className={styles.buttonWrapper}
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="5"
+              data-scroll-position="left"
+            >
+              <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
+                {useTranslation('learnMore')}
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
-          <div className={styles.picture}>
-            <div className={styles.filter} />
+          <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
+            <div className={styles.picture}>
+              <div className={styles.filter} />
+            </div>
           </div>
         </div>
       </div>
