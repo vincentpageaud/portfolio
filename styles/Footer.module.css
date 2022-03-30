@@ -8,7 +8,7 @@
   display: flex;
   padding: 0 2.5%;
   padding-bottom: 5%;
-  max-width: 2600px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 .wrapper hr {
@@ -32,7 +32,8 @@
 }
 
 .mainTitle {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 2000px;
   padding: 2.5%;
   font-size: 4em;
   color: #ffffff;

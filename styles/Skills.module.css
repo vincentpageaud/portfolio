@@ -9,7 +9,8 @@
 }
 
 .mainTitle {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 2000px;
   padding: 2.5%;
   font-size: 4em;
   color: var(--secondary-color);
