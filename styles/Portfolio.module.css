@@ -1,7 +1,6 @@
 .container {
   background-image: url('/patterns/portfolio.png');
   color: #dfd1c9;
-  will-change: transform;
 }
 .filter {
   background-color: rgba(223, 209, 201, 0.6);
