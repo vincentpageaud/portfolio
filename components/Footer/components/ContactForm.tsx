@@ -19,7 +19,7 @@ const ContactForm: React.FC = () => {
     email: false,
     message: false,
   });
-  const nameReg = /^[a-z ,.'-]+$/i;
+  const nameReg = /^[A-Za-zÀ-ÖØ-öø-ÿ ,.'-]*$/;
   const emailReg =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
