@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
   const handleBlur: Handler = (e) => {
     switch (e.target.id) {
       case 'fullName':
-        setFormError({ ...formError, fullName: !nameReg.test(e.target.value) });
+        setFormError({ ...formError, fullName: !nameReg.test(e.target.value) || e.target.value.length === 0 });
         break;
       case 'email':
         setFormError({ ...formError, email: !emailReg.test(e.target.value) });
