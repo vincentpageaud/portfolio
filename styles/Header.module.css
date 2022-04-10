@@ -1,9 +1,11 @@
 .background{
-  background-image: url('/patterns/header.png');
+  background-image: url('/header.jpg');
+  background-size: cover;
+  background-position: bottom;
 }
 
 .container{
-  background-color: rgba(79, 62, 54, 0.81);
+  background-color: rgba(79, 62, 54, 0.82);
 }
 .wrapper{
   display: flex;
