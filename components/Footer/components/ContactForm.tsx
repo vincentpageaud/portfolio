@@ -39,7 +39,6 @@ const ContactForm: React.FC = () => {
         break;
       case 'message':
         setFormError({ ...formError, message: e.target.value.length === 0 });
-        console.log(e.target.value.length);
         break;
     }
   };
