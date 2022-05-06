@@ -19,7 +19,7 @@ const CardSubmenu: React.FC<Props> = ({ links }) => {
       <div
         className={styles.subMenuIcon}
         onClick={() => setIsOpen(!isOpen)}
-        onBlur={() => setTimeout(() => setIsOpen(false), 120)}
+        onBlur={() => setTimeout(() => setIsOpen(false), 200)}
         role="button"
         tabIndex={0}
         onKeyDown={() => null}
