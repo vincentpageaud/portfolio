@@ -1,6 +1,6 @@
 import CardHeader from './CardHeader';
 import CardTags from './CardTags';
-import { PortfolioModel } from 'models/PortfolioModel';
+import { PortfolioModel } from '@models/PortfolioModel';
 
 import styles from '@styles/Portfolio.module.css';
 import useTranslationFromArray from '@hooks/useTranslationFromArray';

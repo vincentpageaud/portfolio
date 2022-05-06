@@ -1,4 +1,4 @@
-import { id } from 'i18n';
+import { id } from '@i18n';
 
 const fr: id = {
   home: 'Accueil',

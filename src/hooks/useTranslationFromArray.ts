@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import { Description } from 'models/GenericModel';
+import { Description } from '@models/GenericModel';
 
 const useTranslationFromArray = (array: Description[]): Description => {
   const [localizedArray, setLocalizedArray] = React.useState<Description>({});

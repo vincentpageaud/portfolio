@@ -1,6 +1,6 @@
 import Card from './Card';
 import portfolioConf from '@configs/portfolio';
-import { PortfolioModel } from 'models/PortfolioModel';
+import { PortfolioModel } from '@models/PortfolioModel';
 
 const CardsManager: React.FC = () => {
   const cards = Object.values(portfolioConf) as PortfolioModel[];

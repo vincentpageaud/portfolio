@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Links } from 'models/PortfolioModel';
+import { Links } from '@models/PortfolioModel';
 import CardSubmenu from './CardSubmenu';
 
 import styles from '@styles/Portfolio.module.css';
