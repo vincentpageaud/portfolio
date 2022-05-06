@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import locales from 'i18n';
+import locales from '@i18n';
 
 const useTranslation = (id: string): string => {
   const [translation, setTranslation] = React.useState('');

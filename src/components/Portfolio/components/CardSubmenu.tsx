@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import useTranslation from '@hooks/useTranslation';
-import Submenu from 'assets/Submenu';
-import { Links } from 'models/PortfolioModel';
+import Submenu from '@assets/Submenu';
+import { Links } from '@models/PortfolioModel';
 
 import styles from '@styles/Portfolio.module.css';
 
