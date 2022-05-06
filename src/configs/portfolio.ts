@@ -1,8 +1,33 @@
 const portfolioConf = {
+  portfolio: {
+    name: 'Portfolio',
+    logoUrl: '/android-chrome-192x192.png',
+    coverUrl: '/projects/portfoliocover.jpg',
+    type: 'Front End',
+    tags: ['React', 'NextJS', 'TypeScript', 'Locomotive Scroll', 'ThreeJS', 'Axios'],
+    description: [
+      {
+        language: 'EN',
+        contents:
+          "In order to centralize my projects and show my skills in development, I've decided to make this website like a showcase of my work. The whole code is available on my GitHub.",
+      },
+      {
+        language: 'FR',
+        contents:
+          "Dans le but de centraliser mes projets et montrer mes compétences en développement, j'ai décidé de réaliser ce site comme une vitrine de mon travail. L'ensemble du code est disponible sur mon GitHub.",
+      },
+    ],
+    links: {
+      git: {
+        host: 'GitHub',
+        url: 'https://github.com/vincentpageaud/portfolio',
+      },
+    },
+  },
   keyservices: {
     name: 'KeyServices',
     logoUrl: '/projects/keyservices.png',
-    coverUrl: '/projects/keyservicescover.png',
+    coverUrl: '/projects/keyservicescover.jpg',
     type: 'Full stack',
     tags: ['React', 'NextJS', 'Redux', 'Leaflet', 'Framer Motion', 'NodeJS', 'Express', 'MongoDB'],
     description: [
@@ -19,16 +44,12 @@ const portfolioConf = {
     ],
     // links: {
     //   website: 'https://keyservices.vincentpageaud.com/',
-    //   git: {
-    //     host: 'GitHub',
-    //     url: 'https://github.com/vincentpageaud/keyservices-dev',
-    //   },
     // },
   },
   thetiptop: {
     name: 'ThéTipTop',
     logoUrl: '/projects/thetiptop.png',
-    coverUrl: '/projects/thetiptopcover.png',
+    coverUrl: '/projects/thetiptopcover.jpg',
     type: 'Front End',
     tags: ['TypeScript', 'React', 'NextJS', 'Rematch', 'Material UI', 'Axios', 'SwiperJS', 'NodeJS', 'Koa', 'MongoDB'],
     description: [
