@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-import useTranslation from 'hooks/useTranslation';
-import useTranslationFromArray from 'hooks/useTranslationFromArray';
+import useTranslation from '@hooks/useTranslation';
+import useTranslationFromArray from '@hooks/useTranslationFromArray';
 import List from './components/List';
 import Summary from './components/Summary';
 import CanvasWrapper from './components/CanvasWrapper';
 import AnimatedWaves from './components/AnimatedWaves';
-import skillsConf from 'configurations/skills';
+import skillsConf from '@configs/skills';
 
-import styles from '../../styles/Skills.module.css';
+import styles from '@styles/Skills.module.css';
 
 const Skills: React.FC = () => {
   const [scale, setScale] = useState(1);

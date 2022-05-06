@@ -1,5 +1,5 @@
 import Card from './Card';
-import portfolioConf from 'configurations/portfolio';
+import portfolioConf from '@configs/portfolio';
 import { PortfolioModel } from 'models/PortfolioModel';
 
 const CardsManager: React.FC = () => {

@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import Header from 'components/Header/Header';
-import Portfolio from 'components/Portfolio/Portfolio';
-import Skills from 'components/Skills/Skills';
-import Footer from 'components/Footer/Footer';
+import Header from '@components/Header';
+import Portfolio from '@components/Portfolio';
+import Skills from '@components/Skills';
+import Footer from '@components/Footer';
 
-import useTranslation from 'hooks/useTranslation';
-import useTranslationFromArray from 'hooks/useTranslationFromArray';
+import useTranslation from '@hooks/useTranslation';
+import useTranslationFromArray from '@hooks/useTranslationFromArray';
 
-import skillsConf from 'configurations/skills';
+import skillsConf from '@configs/skills';
 
 const Home: NextPage = () => {
   let { contents } = useTranslationFromArray(skillsConf.summary);

@@ -1,10 +1,10 @@
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-import useTranslation from 'hooks/useTranslation';
-import use100vh from 'hooks/use100vh';
-import LanguageSelector from 'components/LanguageSelector/LanguageSelector';
+import useTranslation from '@hooks/useTranslation';
+import use100vh from '@hooks/use100vh';
+import LanguageSelector from '@components/LanguageSelector';
 
-import styles from '../../styles/Header.module.css';
+import styles from '@styles/Header.module.css';
 
 const Header: React.FC = () => {
   const height = use100vh();

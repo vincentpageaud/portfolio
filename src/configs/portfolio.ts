@@ -17,13 +17,13 @@ const portfolioConf = {
           'Sur ce projet fictif, j’ai réalisé une PWA de conciergerie complète. Avec la gestion des biens, des profils utilisateurs, et la possibilité de contacter son conseiller. J’ai créé l’ensemble de l’UI/UX, le Front et le Back.',
       },
     ],
-    // links: {
-    //   website: 'http://google.com/',
-    //   git: {
-    //     host: 'GitHub',
-    //     url: 'http://youtube.com/',
-    //   },
-    // },
+    links: {
+      website: 'https://keyservices.vincentpageaud.com/',
+      git: {
+        host: 'GitHub',
+        url: 'https://github.com/vincentpageaud/keyservices-dev',
+      },
+    },
   },
   thetiptop: {
     name: 'ThéTipTop',

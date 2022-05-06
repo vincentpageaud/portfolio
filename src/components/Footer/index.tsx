@@ -1,10 +1,10 @@
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-import useTranslation from 'hooks/useTranslation';
+import useTranslation from '@hooks/useTranslation';
 
 import ContactForm from './components/ContactForm';
 
-import styles from 'styles/Footer.module.css';
+import styles from '@styles/Footer.module.css';
 
 const Footer: React.FC = () => {
   const { scroll } = useLocomotiveScroll();

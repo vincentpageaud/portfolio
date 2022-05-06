@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import useTranslation from 'hooks/useTranslation';
+import useTranslation from '@hooks/useTranslation';
 import Submenu from 'assets/Submenu';
 import { Links } from 'models/PortfolioModel';
 
-import styles from '../../../styles/Portfolio.module.css';
+import styles from '@styles/Portfolio.module.css';
 
 interface Props {
   links: Links;
@@ -19,7 +19,7 @@ const CardSubmenu: React.FC<Props> = ({ links }) => {
       <div
         className={styles.subMenuIcon}
         onClick={() => setIsOpen(!isOpen)}
-        onBlur={() => setIsOpen(false)}
+        onBlur={() => setTimeout(() => setIsOpen(false), 120)}
         role="button"
         tabIndex={0}
         onKeyDown={() => null}

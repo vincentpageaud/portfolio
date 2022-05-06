@@ -1,6 +1,6 @@
 import CardsManager from './components/CardsManager';
 
-import styles from '../../styles/Portfolio.module.css';
+import styles from '@styles/Portfolio.module.css';
 
 const Portfolio: React.FC = () => {
   return (
