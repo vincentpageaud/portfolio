@@ -3,8 +3,8 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
-import '@styles/globals.css';
-import '@styles/locomotive-scroll.css';
+import '@styles/globals.scss';
+import '@styles/locomotive-scroll.scss';
 
 const MyApp: React.ReactNode = ({ Component, pageProps }: AppProps) => {
   const containerRef = useRef(null);

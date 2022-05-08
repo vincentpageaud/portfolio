@@ -2,7 +2,7 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 import useTranslation from '@hooks/useTranslation';
 import use100vh from '@hooks/use100vh';
-import LanguageSelector from '@components/LanguageSelector';
+import LanguageSelector from '@UI/LanguageSelector';
 
 import styles from '@styles/Header.module.css';
 

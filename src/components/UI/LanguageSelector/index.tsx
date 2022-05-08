@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import styles from '@styles/LanguageSelector.module.css';
+import styles from '@styles/UI/LanguageSelector.module.scss';
 import locales from '@i18n';
 
 const LanguageSelector = (): React.ReactElement => {
