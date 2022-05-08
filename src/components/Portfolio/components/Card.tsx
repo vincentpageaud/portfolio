@@ -1,5 +1,5 @@
 import CardHeader from './CardHeader';
-import CardTags from './CardTags';
+import Tags from '@UI/Tags';
 import { PortfolioModel } from '@models/PortfolioModel';
 
 import styles from '@styles/Portfolio.module.css';
@@ -31,7 +31,7 @@ const Card: React.FC<Props> = ({ direction, variant, datas }) => {
           links={datas.links}
         />
         <div className={styles.type}>{datas.type}</div>
-        <CardTags tags={datas.tags} />
+        <Tags tags={datas.tags} />
         <p className={styles.cardContent}>{contents}</p>
       </article>
     </div>

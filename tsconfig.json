@@ -21,6 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@UI/*": ["src/components/UI/*"],
       "@hooks/*": ["src/hooks/*"],
       "@configs/*": ["src/configs/*"],
       "@styles/*": ["styles/*"],
