@@ -4,7 +4,7 @@ const portfolioConf = {
     logoUrl: '/android-chrome-192x192.png',
     coverUrl: '/projects/portfoliocover.jpg',
     type: 'Front End',
-    tags: ['React', 'NextJS', 'TypeScript', 'Locomotive Scroll', 'ThreeJS', 'Axios'],
+    tags: ['React', 'NextJS', 'TypeScript', 'Locomotive Scroll', 'ThreeJS', 'Axios', 'Sass'],
     description: [
       {
         language: 'EN',
