@@ -18,9 +18,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The technologies I use:
 
-- React 17.0.2
-- Next 12.0.7
-- TypeScript 4.5.4
+- React
+- Next
+- TypeScript
 
 ## Learn more
 
