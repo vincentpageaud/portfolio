@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-
-
 import SubmenuIcon from '@assets/Submenu';
 
 import styles from "@styles/UI/Submenu.module.scss";
