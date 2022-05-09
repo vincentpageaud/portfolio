@@ -2,7 +2,7 @@ import CardHeader from './CardHeader';
 import Tags from '@UI/Tags';
 import { PortfolioModel } from '@models/PortfolioModel';
 
-import styles from '@styles/Portfolio.module.css';
+import styles from '@styles/Portfolio.module.scss';
 import useTranslationFromArray from '@hooks/useTranslationFromArray';
 
 interface Props {
