@@ -46,27 +46,6 @@
   flex: 1;
   padding-right: 2.5%;
 }
-.formContainer > label {
-  width: 100%;
-  transition: all .3s ease-in-out;
-}
-.formContainer > textarea,
-.formContainer > input {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.7);
-  resize: none;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-  font-size: 1em;
-}
-.formContainer > textarea:focus,
-.formContainer > input:focus {
-  background-color: #ffffff;
-}
 .button {
   border-radius: 20px;
   margin-top: 15px;

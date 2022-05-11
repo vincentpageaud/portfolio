@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Input from '@UI/Input';
 import useContactForm from '@hooks/useContactForm';
 import useTranslation from '@hooks/useTranslation';
 
@@ -75,14 +76,23 @@ const ContactForm: React.FC = () => {
   return (
     <form className={styles.formContainer}>
       <h1>{useTranslation('contactForm')}</h1>
-      <label className={formError.fullName ? styles.error : ''} htmlFor="fullName">
-        {useTranslation('fullName')}
-      </label>
-      <input type="text" id="fullName" value={contactForm.fullName} onChange={handleChange} onBlur={handleBlur} />
-      <label className={formError.email ? styles.error : ''} htmlFor="email">
-        {useTranslation('mailAddress')}
-      </label>
-      <input type="email" id="email" value={contactForm.email} onChange={handleChange} onBlur={handleBlur} />
+      <Input
+        id="fullName"
+        label={useTranslation('fullName')}
+        value={contactForm.fullName} 
+        onChange={(e) => handleChange(e)}
+        onBlur={(e) => handleBlur(e)}
+        error={formError.fullName}
+      />
+      <Input
+        type="email" 
+        id="email"
+        label={useTranslation('mailAddress')}
+        value={contactForm.email}
+        onChange={(e) => handleChange(e)}
+        onBlur={(e) => handleBlur(e)}
+        error={formError.email}
+      />
       <label className={formError.message ? styles.error : ''} htmlFor="message">
         Message
       </label>
