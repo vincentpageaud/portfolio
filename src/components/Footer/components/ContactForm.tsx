@@ -93,16 +93,15 @@ const ContactForm: React.FC = () => {
         onBlur={(e) => handleBlur(e)}
         error={formError.email}
       />
-      <label className={formError.message ? styles.error : ''} htmlFor="message">
-        Message
-      </label>
-      <textarea
-        name=""
+      <Input
         id="message"
         rows={10}
+        label="Message"
         value={contactForm.message}
-        onChange={handleChange}
-        onBlur={handleBlur}
+        onChange={(e) => handleChange(e)}
+        onBlur={(e) => handleBlur(e)}
+        error={formError.message}
+        multiline
       />
       <div className={styles.error} style={{ opacity: error ? 1 : 0 }}>
         {useTranslation('networkError')}

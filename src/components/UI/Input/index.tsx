@@ -10,15 +10,27 @@ interface Props {
   type?: string;
   onChange: Handler;
   onBlur?: Handler;
+  multiline?: boolean;
+  rows?: number;
 }
 
-const Input: React.FC<Props> = ({ id, label, value, error, onChange, onBlur, type = "text" }) => {
+const Input: React.FC<Props> = ({ id, label, value, error, onChange, onBlur, type = "text", rows, multiline }) => {
   return (
     <div className={styles.container}>
       <label className={error ? styles.error : ''} htmlFor={id}>
         {label}
       </label>
-      <input type={type} id={id} value={value} onChange={onChange} onBlur={onBlur} />
+      {multiline ? (
+        <textarea
+          id={id}
+          rows={rows}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+        />
+      ) : (
+        <input type={type} id={id} value={value} onChange={onChange} onBlur={onBlur} />
+      )}
     </div>
   )
 }
