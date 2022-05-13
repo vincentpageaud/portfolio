@@ -5,7 +5,7 @@ import Button from '@UI/Button';
 
 import ContactForm from './components/ContactForm';
 
-import styles from '@styles/Footer.module.css';
+import styles from '@styles/Footer.module.scss';
 
 const Footer: React.FC = () => {
   const { scroll } = useLocomotiveScroll();

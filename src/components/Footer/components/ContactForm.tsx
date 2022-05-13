@@ -5,7 +5,7 @@ import Button from '@UI/Button';
 import useContactForm from '@hooks/useContactForm';
 import useTranslation from '@hooks/useTranslation';
 
-import styles from '@styles/Footer.module.css';
+import styles from '@styles/Footer.module.scss';
 
 type Handler = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
 
