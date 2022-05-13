@@ -1,6 +1,7 @@
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 import useTranslation from '@hooks/useTranslation';
+import Button from '@UI/Button';
 
 import ContactForm from './components/ContactForm';
 
@@ -18,63 +19,23 @@ const Footer: React.FC = () => {
         <hr />
         <div className={styles.extLinks}>
           <h1>{useTranslation('myNetworks')}</h1>
-          <p>
-            <a
-              className={styles.button}
-              href="https://www.linkedin.com/in/vincentpageaud/"
-              target="_blank"
-              rel="noreferrer"
+            <Button 
+              onClick={() => window.open('https://www.linkedin.com/in/vincentpageaud/', '_blank')}
             >
               LinkedIn
-            </a>
-            <a
-              className={styles.button}
-              href="https://www.malt.fr/profile/vincentpageaud"
-              target="_blank"
-              rel="noreferrer"
+            </Button>
+            <Button
+              onClick={() => window.open('https://www.malt.fr/profile/vincentpageaud', '_blank')}
             >
               Malt
-            </a>
-          </p>
+            </Button>
           <nav>
             <h1>Navigation</h1>
             <div>
-              <a
-                className={styles.button}
-                onClick={() => scroll.scrollTo('#top')}
-                onKeyDown={() => null}
-                role="button"
-                tabIndex={0}
-              >
-                {useTranslation('home')}
-              </a>
-              <a
-                className={styles.button}
-                onClick={() => scroll.scrollTo('#portfolio')}
-                onKeyDown={() => null}
-                role="button"
-                tabIndex={0}
-              >
-                {useTranslation('Portfolio')}
-              </a>
-              <a
-                className={styles.button}
-                onClick={() => scroll.scrollTo('#skills')}
-                onKeyDown={() => null}
-                role="button"
-                tabIndex={0}
-              >
-                {useTranslation('skills')}
-              </a>
-              <a
-                className={styles.button}
-                onClick={() => scroll.scrollTo('#footer')}
-                onKeyDown={() => null}
-                role="button"
-                tabIndex={0}
-              >
-                {useTranslation('contactMe')}
-              </a>
+              <Button onClick={() => scroll.scrollTo('#top')}>{useTranslation('home')}</Button>
+              <Button onClick={() => scroll.scrollTo('#portfolio')}>{useTranslation('Portfolio')}</Button>
+              <Button onClick={() => scroll.scrollTo('#skills')}>{useTranslation('skills')}</Button>
+              <Button onClick={() => scroll.scrollTo('#footer')}>{useTranslation('contactMe')}</Button>
             </div>
           </nav>
         </div>

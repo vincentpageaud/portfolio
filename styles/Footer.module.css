@@ -19,7 +19,7 @@
   width: 100%;
   font-size: 1.2em;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   font-weight: 400;
   color: #f5deb3;
 }
@@ -46,32 +46,12 @@
   flex: 1;
   padding-right: 2.5%;
 }
-.button {
-  border-radius: 20px;
-  margin-top: 15px;
+.extLinks button {
+  margin: 10px 0;
   margin-right: 10px;
-  padding: 10px 30px;
-  font-size: 0.9em;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: all .2s ease-in-out;
-  appearance: none;
-  outline: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
 }
-.button:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.button:last-child {
+.extLinks button:last-child {
   margin-right: 0;
-}
-.disabled {
-  pointer-events: none;
-  cursor: default;
-}
-.disabled:hover {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .error {
   color: #f55;
@@ -83,7 +63,7 @@
   padding-left: 2.5%;
 }
 .extLinks nav {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .extLinks nav > div {
   display: flex;

@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  border-radius: 20px;
+  height: 38px;
+  padding: 0 25px;
+  font-size: 0.9em;
+  font-weight: 100;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all .2s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  &:active,
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.disabled:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
