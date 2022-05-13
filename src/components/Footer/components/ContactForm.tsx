@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Input from '@UI/Input';
+import Button from '@UI/Button';
 import useContactForm from '@hooks/useContactForm';
 import useTranslation from '@hooks/useTranslation';
 
@@ -74,7 +75,10 @@ const ContactForm: React.FC = () => {
     contactForm.message.length === 0;
 
   return (
-    <form className={styles.formContainer}>
+    <form
+      className={styles.formContainer}
+      onSubmit={(e) => e.preventDefault()}
+    >
       <h1>{useTranslation('contactForm')}</h1>
       <Input
         id="fullName"
@@ -106,15 +110,12 @@ const ContactForm: React.FC = () => {
       <div className={styles.error} style={{ opacity: error ? 1 : 0 }}>
         {useTranslation('networkError')}
       </div>
-      <div
-        className={`${styles.button} ${isSent || isSending || isInputError ? styles.disabled : ''}`}
+      <Button
         onClick={handleSubmit}
-        role="button"
-        onKeyDown={() => []}
-        tabIndex={0}
+        disabled={isSent || isSending || isInputError}
       >
         {isSent ? sent : isSending ? sending : send}
-      </div>
+      </Button>
     </form>
   );
 };
