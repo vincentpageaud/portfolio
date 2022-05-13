@@ -29,6 +29,11 @@ const Footer: React.FC = () => {
             >
               Malt
             </Button>
+            <Button
+              onClick={() => window.open('https://github.com/vincentpageaud', '_blank')}
+            >
+              GitHub
+            </Button>
           <nav>
             <h1>Navigation</h1>
             <div>
