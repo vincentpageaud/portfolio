@@ -1,6 +1,6 @@
 .container {
   background-image: url('/patterns/portfolio.png');
-  color: #dfd1c9;
+  color: rgba(255, 255, 255, 0.7);
 }
 .filter {
   background-color: rgba(223, 209, 201, 0.6);
@@ -76,7 +76,6 @@
 .type {
   margin: 0 20px;
   font-size: .9em;
-  color: rgba(255, 255, 255, 0.7);
 }
 .isInView .card {
   animation: 1s anim-lineUp ease-in-out;
@@ -88,7 +87,7 @@
   }
   50% {
     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   100% {
     opacity: 1;
@@ -121,7 +120,7 @@
     }
     50% {
       opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1.12);
     }
     100% {
       opacity: 1;
