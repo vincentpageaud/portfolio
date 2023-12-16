@@ -73,7 +73,6 @@
   margin-right: 5%;
 }
 .picture{
-  background-image: url('../public/me.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
