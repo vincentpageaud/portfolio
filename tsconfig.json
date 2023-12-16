@@ -27,6 +27,8 @@
       "@styles/*": ["styles/*"],
       "@models/*": ["src/models/*"],
       "@assets/*": ["src/assets/*"],
+      "@services/*": ["src/services/*"],
+      "@enums/*": ["src/enums/*"],
       "@i18n": ["src/i18n"],
     }
   },
