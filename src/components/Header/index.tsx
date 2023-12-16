@@ -1,14 +1,20 @@
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-import useTranslation from '@hooks/useTranslation';
 import use100vh from '@hooks/use100vh';
 import LanguageSelector from '@UI/LanguageSelector';
+import { Headers } from '@models/HeadersModel';
 
 import styles from '@styles/Header.module.css';
 
-const Header: React.FC = () => {
+interface Props {
+  data: Headers;
+};
+
+const Header: React.FC<Props> = ({ data }) => {
   const height = use100vh();
   const { scroll } = useLocomotiveScroll();
+
+  const content = data.items[0];
 
   const onClick = (): void => {
     scroll.scrollTo('#portfolio');
@@ -21,10 +27,10 @@ const Header: React.FC = () => {
         <div className={styles.wrapper} style={{ height }}>
           <div className={styles.text}>
             <div data-scroll data-scroll-speed="1">
-              <h1>Vincent Pageaud</h1>
+              <h1>{content?.fields.name}</h1>
             </div>
             <div data-scroll data-scroll-speed="4">
-              <h2>{useTranslation('mainTitle')}</h2>
+              <h2>{content?.fields.title}</h2>
             </div>
             <div
               className={styles.buttonWrapper}
@@ -34,12 +40,12 @@ const Header: React.FC = () => {
               data-scroll-position="left"
             >
               <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
-                {useTranslation('learnMore')}
+                {content?.fields.buttonName}
               </div>
             </div>
           </div>
           <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
-            <div className={styles.picture}>
+            <div className={styles.picture} style={{ backgroundImage: `url(https:${content?.fields.profilePicture.fields.file.url})` }}>
               <div className={styles.filter} />
             </div>
           </div>
