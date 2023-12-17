@@ -1,18 +1,21 @@
-import Card from './Card';
-import portfolioConf from '@configs/portfolio';
-import { PortfolioModel } from '@models/PortfolioModel';
+import { Project } from '@models/PortfoliosModel';
 
-const CardsManager: React.FC = () => {
-  const cards = Object.values(portfolioConf) as PortfolioModel[];
+import Card from './Card';
+
+interface Props {
+  data?: Project[];
+};
+
+const CardsManager: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      {cards.map((card, index) => {
+      {data?.map((card, index) => {
         const isPair = index - (1 % 2) === 0 ? true : false;
         return isPair ? (
-          <Card key={card.name} direction="right" variant="secondary" datas={card} />
+          <Card key={card.sys.id} direction="right" variant="secondary" datas={card} />
         ) : (
-          <Card key={card.name} direction="left" datas={card} />
+          <Card key={card.sys.id} direction="left" datas={card} />
         );
       })}
     </>

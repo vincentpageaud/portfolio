@@ -1,18 +1,19 @@
-import CardHeader from './CardHeader';
 import Tags from '@UI/Tags';
-import { PortfolioModel } from '@models/PortfolioModel';
+import RichText from '@UI/RichText';
+import { Project } from '@models/PortfoliosModel';
+
+import CardHeader from './CardHeader';
 
 import styles from '@styles/Portfolio.module.scss';
-import useTranslationFromArray from '@hooks/useTranslationFromArray';
 
 interface Props {
   direction: 'left' | 'right';
   variant?: 'main' | 'secondary';
-  datas: PortfolioModel;
+  datas: Project;
 }
 
 const Card: React.FC<Props> = ({ direction, variant, datas }) => {
-  const { contents } = useTranslationFromArray(datas.description);
+  const { description, links, logo, preview, tags, title, type } = datas.fields;
 
   return (
     <div
@@ -24,15 +25,17 @@ const Card: React.FC<Props> = ({ direction, variant, datas }) => {
     >
       <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
         <CardHeader
-          title={datas.name}
-          url={datas.logoUrl}
-          backgroundUrl={datas.coverUrl}
+          title={title}
+          url={logo && `https:${logo.fields.file.url}`}
+          backgroundUrl={preview && `https:${preview.fields.file.url}`}
           variant={variant}
-          links={datas.links}
+          links={links}
         />
-        <div className={styles.type}>{datas.type}</div>
-        <Tags tags={datas.tags} />
-        <p className={styles.cardContent}>{contents}</p>
+        <div className={styles.type}>{type}</div>
+        {tags && <Tags tags={tags} />}
+        <div className={styles.cardContent}>
+          <RichText text={description} />
+        </div>
       </article>
     </div>
   );

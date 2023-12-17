@@ -1,15 +1,10 @@
+import { Image } from '@models/GenericModel';
+
 interface Header {
   fields: {
     buttonName: string;
     name: string;
-    profilePicture: {
-      fields: {
-        file: {
-          url: string;
-        };
-        title: string;
-      };
-    };
+    profilePicture: Image;
     title: string;
   };
 }
