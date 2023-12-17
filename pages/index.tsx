@@ -5,10 +5,9 @@ import Header from '@components/Header';
 import Portfolio from '@components/Portfolio';
 import Skills from '@components/Skills';
 import Footer from '@components/Footer';
-import client from '@services/contentful';
-import ContentType from '@enums/ContentType';
+import { fetchHeaders, fetchPortfolios } from '@services/contentful';
 import { Headers } from '@models/HeadersModel';
-import { Portfolios } from '@models/PortfoliosModel'
+import { Portfolios } from '@models/PortfoliosModel';
 
 import useTranslationFromArray from '@hooks/useTranslationFromArray';
 
@@ -42,16 +41,10 @@ const Home: NextPage<Props> = ({ headers, portfolios }) => {
 };
 
 export const getStaticProps = async (ctx: NextPageContext) => {
-  const fetchHeaders = () => client.getEntries({
-    locale: ctx.locale,
-    content_type: ContentType.header
-  });
-  const fetchPortfolios = () => client.getEntries({
-    locale: ctx.locale,
-    content_type: ContentType.portfolio
-  });
-
-  const result = await Promise.all([fetchHeaders(), fetchPortfolios()]);
+  const result = await Promise.all([
+    fetchHeaders(ctx.locale), 
+    fetchPortfolios(ctx.locale),
+  ]);
 
   return { props: { headers: result[0], portfolios: result[1] } };
 }

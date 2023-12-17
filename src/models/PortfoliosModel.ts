@@ -1,16 +1,17 @@
-import { Document, Link } from '@contentful/rich-text-types';
+import { Document } from '@contentful/rich-text-types';
 
 import { Image } from '@models/GenericModel';
 
 export interface Project {
   fields: {
     description?: Document;
-    links?: Link[];
+    git?: string;
     logo?: Image;
     preview?: Image;
     tags?: string[];
     title?: string;
     type: string;
+    website?: string;
   };
   sys: {
     id: string;

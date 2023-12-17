@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
-import { Links } from '@models/PortfolioModel';
 import CardSubmenu from './CardSubmenu';
 
 import styles from '@styles/Portfolio.module.scss';
 
 interface Props {
-  title: string;
-  url: string;
-  backgroundUrl: string;
+  git?: string;
+  title?: string;
+  url?: string;
+  backgroundUrl?: string;
   variant?: string;
-  links?: Links;
+  website?: string;
 }
 
-const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant, links }) => {
+const CardHeader: React.FC<Props> = ({ git, title, url, backgroundUrl, variant, website }) => {
   return (
     <header>
       <div className={styles.coverPicture} style={{ backgroundImage: `url(${backgroundUrl})` }}>
@@ -22,9 +22,9 @@ const CardHeader: React.FC<Props> = ({ title, url, backgroundUrl, variant, links
             className={styles.logoWrapper}
             style={{ borderColor: variant === 'secondary' ? 'var(--secondary-color)' : '' }}
           >
-            <Image width={110} height={110} src={url} alt={title} />
+            {url && <Image width={110} height={110} src={url} alt={title} />}
           </div>
-          {links && <CardSubmenu links={links} />}
+          {<CardSubmenu git={git} website={website} />}
         </div>
       </div>
       <h1 className={styles.cardTitle}>{title}</h1>
