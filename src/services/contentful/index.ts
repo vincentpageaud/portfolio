@@ -2,7 +2,7 @@ import { createClient } from 'contentful';
 
 import ContentType from '@enums/ContentType';
 
-const isPreview = process.env.NODE_ENV === 'development';
+const isPreview = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview';
 
 const client = createClient({
   space: process.env.CF_SPACE_ID || '',
