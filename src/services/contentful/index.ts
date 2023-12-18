@@ -28,4 +28,13 @@ export const fetchPortfolios = async (locale?: string) => {
   return result;
 };
 
+export const fetchSkills = async (locale?: string) => {
+  const result = await client.getEntries({
+    locale: locale,
+    content_type: ContentType.skills,
+  });
+
+  return result;
+};
+
 export default client;

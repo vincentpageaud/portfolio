@@ -1,9 +1,9 @@
-export interface Image {
+export interface File {
   fields: {
+    title: string;
     file: {
       description: string;
       url: string;
-      title: string;
     };
   };
 }

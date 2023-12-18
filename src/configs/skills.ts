@@ -15,46 +15,6 @@ const skillsConf = {
       ],
     },
   ],
-  frontEnd: [
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'React',
-    'NextJS',
-    'Vue.js',
-    'Material UI',
-    'TypeScript',
-    'Redux',
-    'Rematch',
-    'MochaJS',
-    'Axios',
-    'Sass',
-    'Opquast Certified',
-  ],
-  backEnd: [
-    'TypeScript',
-    'NodeJS',
-    'MongoDB',
-    'Express',
-    'Docker',
-    'Koa',
-    'PHP',
-    'SQL',
-    'MochaJS',
-    'Jenkins',
-    'Traefik',
-  ],
-  cvUrl: [
-    {
-      language: 'EN',
-      title: 'Download the CV (in French)',
-      url: '/CV.pdf',
-    },
-    {
-      language: 'FR',
-      title: 'Télécharger le CV',
-    },
-  ],
 };
 
 export default skillsConf;

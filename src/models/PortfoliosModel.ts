@@ -1,13 +1,13 @@
 import { Document } from '@contentful/rich-text-types';
 
-import { Image } from '@models/GenericModel';
+import { File } from '@models/GenericModel';
 
 export interface Project {
   fields: {
     description?: Document;
     git?: string;
-    logo?: Image;
-    preview?: Image;
+    logo?: File;
+    preview?: File;
     tags?: string[];
     title?: string;
     type: string;
