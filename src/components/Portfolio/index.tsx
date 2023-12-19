@@ -1,3 +1,5 @@
+import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
+
 import { Portfolios } from '@models/PortfoliosModel';
 
 import CardsManager from './components/CardsManager';
@@ -6,10 +8,10 @@ import styles from '@styles/Portfolio.module.scss';
 
 interface Props {
   data: Portfolios;
-};
+}
 
 const Portfolio: React.FC<Props> = ({ data }) => {
-  const content = data.items[0];
+  const content = useContentfulLiveUpdates(data.items[0]);
 
   return (
     <section id="portfolio" className={styles.container} data-scroll-section>

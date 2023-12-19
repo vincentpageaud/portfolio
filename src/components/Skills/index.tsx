@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
 import skillsConf from '@configs/skills';
 import { Skills as SkillsModel } from '@models/SkillsModel';
@@ -24,7 +25,7 @@ const Skills: React.FC<Props> = ({ data }) => {
 
   const isMobileOrTablet = scroll?.options?.isMobile || scroll?.options?.isTablet;
 
-  const content = data.items[0];
+  const content = useContentfulLiveUpdates(data.items[0]);
 
   const { contents: summaryContent } = useTranslationFromArray(skillsConf.summary);
 

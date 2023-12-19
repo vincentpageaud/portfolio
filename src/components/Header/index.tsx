@@ -1,4 +1,5 @@
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
 import use100vh from '@hooks/use100vh';
 import LanguageSelector from '@UI/LanguageSelector';
@@ -8,13 +9,13 @@ import styles from '@styles/Header.module.css';
 
 interface Props {
   data: Headers;
-};
+}
 
 const Header: React.FC<Props> = ({ data }) => {
   const height = use100vh();
   const { scroll } = useLocomotiveScroll();
 
-  const content = data.items[0];
+  const content = useContentfulLiveUpdates(data.items[0]);
 
   const onClick = (): void => {
     scroll.scrollTo('#portfolio');
@@ -45,7 +46,10 @@ const Header: React.FC<Props> = ({ data }) => {
             </div>
           </div>
           <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
-            <div className={styles.picture} style={{ backgroundImage: `url(https:${content?.fields.profilePicture.fields.file.url})` }}>
+            <div
+              className={styles.picture}
+              style={{ backgroundImage: `url(https:${content?.fields.profilePicture.fields.file.url})` }}
+            >
               <div className={styles.filter} />
             </div>
           </div>
