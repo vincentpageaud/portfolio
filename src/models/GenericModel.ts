@@ -1,9 +1,9 @@
 export interface File {
-  fields: {
-    title: string;
-    file: {
-      description: string;
-      url: string;
+  fields?: {
+    title?: string;
+    file?: {
+      description?: string;
+      url?: string;
     };
   };
 }

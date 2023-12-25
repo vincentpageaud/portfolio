@@ -3,14 +3,14 @@ import { Document } from '@contentful/rich-text-types';
 import { File } from '@models/GenericModel';
 
 export interface Project {
-  fields: {
+  fields?: {
     description?: Document;
     git?: string;
     logo?: File;
     preview?: File;
     tags?: string[];
     title?: string;
-    type: string;
+    type?: string;
     website?: string;
   };
   sys: {
@@ -19,12 +19,12 @@ export interface Project {
 }
 
 interface Portfolio {
-  fields: {
-    title: string;
-    references: Project[];
+  fields?: {
+    title?: string;
+    references?: Project[];
   };
 }
 
 export interface Portfolios {
-  items: Portfolio[];
+  items?: Portfolio[];
 }

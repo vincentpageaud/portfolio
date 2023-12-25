@@ -3,7 +3,7 @@ import { Document } from '@contentful/rich-text-types';
 import { File } from '@models/GenericModel';
 
 interface Skill {
-  fields: {
+  fields?: {
     title?: string;
     summary?: Document;
     frontEndTags?: string[];
@@ -13,5 +13,5 @@ interface Skill {
 }
 
 export interface Skills {
-  items: Skill[];
+  items?: Skill[];
 }
