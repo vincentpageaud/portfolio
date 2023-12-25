@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Card: React.FC<Props> = ({ direction, variant, datas }) => {
-  const { description, git, logo, preview, tags, title, type, website } = datas.fields;
+  const { description, git, logo, preview, tags, title, type, website } = datas.fields || {};
 
   return (
     <div
@@ -26,8 +26,8 @@ const Card: React.FC<Props> = ({ direction, variant, datas }) => {
       <article className={`${styles.card} ${variant === 'secondary' ? styles.secondaryColor : ''}`}>
         <CardHeader
           title={title}
-          url={logo && `https:${logo.fields.file.url}`}
-          backgroundUrl={preview && `https:${preview.fields.file.url}`}
+          url={logo && `https:${logo.fields?.file?.url}`}
+          backgroundUrl={preview && `https:${preview.fields?.file?.url}`}
           variant={variant}
           git={git}
           website={website}
