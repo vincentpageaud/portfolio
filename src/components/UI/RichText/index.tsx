@@ -8,7 +8,7 @@ interface Props {
 const RichText: React.FC<Props> = ({ text }) => {
   const renderedDescription = text && renderRichText(text);
 
-  return <div>{renderedDescription}</div>
-}
+  return <>{renderedDescription}</>;
+};
 
 export default RichText;
