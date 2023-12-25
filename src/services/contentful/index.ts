@@ -37,4 +37,13 @@ export const fetchSkills = async (locale?: string) => {
   return result;
 };
 
+export const fetchFooters = async (locale?: string) => {
+  const result = await client.getEntries({
+    locale: locale,
+    content_type: ContentType.footer,
+  });
+
+  return result;
+};
+
 export default client;
