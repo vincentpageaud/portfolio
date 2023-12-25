@@ -1,18 +1,17 @@
+import { Document } from '@contentful/rich-text-types';
+
 import useTranslation from '@hooks/useTranslation';
+import RichText from '@UI/RichText';
 
 interface Props {
-  contents: string | string[];
+  content?: Document;
 }
 
-const Summary: React.FC<Props> = ({ contents }) => {
+const Summary: React.FC<Props> = ({ content }) => {
   return (
     <>
       <h1>{useTranslation('summary')}</h1>
-      {typeof contents === 'string' ? (
-        <p>{contents}</p>
-      ) : typeof contents !== 'string' ? (
-        contents.map((content, index) => <p key={index}>{content}</p>)
-      ) : null}
+      <RichText text={content} />
     </>
   );
 };

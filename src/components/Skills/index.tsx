@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 
-import skillsConf from '@configs/skills';
 import { Skills as SkillsModel } from '@models/SkillsModel';
 
-import useTranslationFromArray from '@hooks/useTranslationFromArray';
 import List from './components/List';
 import Summary from './components/Summary';
 import CanvasWrapper from './components/CanvasWrapper';
@@ -14,7 +12,7 @@ import AnimatedWaves from './components/AnimatedWaves';
 import styles from '@styles/Skills.module.css';
 
 interface Props {
-  data: SkillsModel;
+  data?: SkillsModel;
 }
 
 const Skills: React.FC<Props> = ({ data }) => {
@@ -25,9 +23,7 @@ const Skills: React.FC<Props> = ({ data }) => {
 
   const isMobileOrTablet = scroll?.options?.isMobile || scroll?.options?.isTablet;
 
-  const content = useContentfulLiveUpdates(data.items[0]);
-
-  const { contents: summaryContent } = useTranslationFromArray(skillsConf.summary);
+  const { fields } = (data?.items && useContentfulLiveUpdates(data.items[0])) || {};
 
   const isLargeScreen = scale === 1;
 
@@ -60,25 +56,25 @@ const Skills: React.FC<Props> = ({ data }) => {
           data-scroll-sticky
           data-scroll-target="#skills"
         >
-          {content?.fields.title}
+          {fields?.title}
         </h1>
         <div className={styles.contentContainer}>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
-            {summaryContent && <Summary contents={summaryContent} />}
+            <Summary content={fields?.summary} />
           </article>
           <div className={styles.canvasWrapper} data-scroll data-scroll-speed={isLargeScreen ? '3' : '0.5'}>
             <CanvasWrapper scale={scale} />
           </div>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
-            <List title="Front End" elements={content?.fields.frontEndTags || []} />
+            <List title="Front End" elements={fields?.frontEndTags || []} />
           </article>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
-            <List title="Back End" elements={content?.fields.backEndTags || []} />
+            <List title="Back End" elements={fields?.backEndTags || []} />
           </article>
           <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
             <h1>CV</h1>
-            <a href={content?.fields.cv?.fields.file.url} target="_blank" rel="noreferrer">
-              {content?.fields.cv?.fields.title}
+            <a href={fields?.cv?.fields?.file?.url} target="_blank" rel="noreferrer">
+              {fields?.cv?.fields?.title}
             </a>
           </article>
         </div>
