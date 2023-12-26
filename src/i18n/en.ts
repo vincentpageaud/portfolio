@@ -1,8 +1,6 @@
 import { id } from '@i18n';
 
 const en: id = {
-  home: 'Home',
-  skills: 'Skills',
   website: 'Website',
   summary: 'Summary',
   contactMe: 'Contact me',

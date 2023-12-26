@@ -36,12 +36,10 @@ const Footer: React.FC<Props> = ({ data }) => {
             <h1>Navigation</h1>
             <div>
               {fields?.navigationMenu?.map((link) => (
-                <Button onClick={() => window.open(link.fields?.url, '_blank')}>{link.fields?.title}</Button>
+                <Button key={link.fields?.title} onClick={() => scroll.scrollTo(link.fields?.url)}>
+                  {link.fields?.title}
+                </Button>
               ))}
-              <Button onClick={() => scroll.scrollTo('#top')}>{useTranslation('home')}</Button>
-              <Button onClick={() => scroll.scrollTo('#portfolio')}>{useTranslation('Portfolio')}</Button>
-              <Button onClick={() => scroll.scrollTo('#skills')}>{useTranslation('skills')}</Button>
-              <Button onClick={() => scroll.scrollTo('#footer')}>{useTranslation('contactMe')}</Button>
             </div>
           </nav>
         </div>

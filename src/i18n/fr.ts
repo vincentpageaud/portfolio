@@ -1,8 +1,6 @@
 import { id } from '@i18n';
 
 const fr: id = {
-  home: 'Accueil',
-  skills: 'Compétences',
   website: 'Site internet',
   summary: 'Résumé',
   contactMe: 'Me contacter',
