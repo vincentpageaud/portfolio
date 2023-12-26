@@ -14,3 +14,10 @@ export interface Description {
   title?: string;
   url?: string;
 }
+
+export interface Link {
+  fields?: {
+    title?: string;
+    url?: string;
+  };
+}
