@@ -27,12 +27,18 @@ const Footer: React.FC<Props> = ({ data }) => {
         <hr />
         <div className={styles.extLinks}>
           <h1>{useTranslation('myNetworks')}</h1>
+          {fields?.socialNetworks?.map((link) => (
+            <Button onClick={() => window.open(link.fields?.url, '_blank')}>{link.fields?.title}</Button>
+          ))}
           <Button onClick={() => window.open('https://www.linkedin.com/in/vincentpageaud/', '_blank')}>LinkedIn</Button>
           <Button onClick={() => window.open('https://www.malt.fr/profile/vincentpageaud', '_blank')}>Malt</Button>
           <Button onClick={() => window.open('https://github.com/vincentpageaud', '_blank')}>GitHub</Button>
           <nav>
             <h1>Navigation</h1>
             <div>
+              {fields?.navigationMenu?.map((link) => (
+                <Button onClick={() => window.open(link.fields?.url, '_blank')}>{link.fields?.title}</Button>
+              ))}
               <Button onClick={() => scroll.scrollTo('#top')}>{useTranslation('home')}</Button>
               <Button onClick={() => scroll.scrollTo('#portfolio')}>{useTranslation('Portfolio')}</Button>
               <Button onClick={() => scroll.scrollTo('#skills')}>{useTranslation('skills')}</Button>
