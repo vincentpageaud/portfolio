@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
 import Header from '@components/Header';
+import Content from '@components/Content';
 import Portfolio from '@components/Portfolio';
 import Skills from '@components/Skills';
 import Footer from '@components/Footer';
@@ -31,10 +32,10 @@ const Home: NextPage<Props> = ({ headers, portfolios, skills, footers }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header data={headers} />
-      <main>
+      <Content>
         <Portfolio data={portfolios} />
         <Skills data={skills} />
-      </main>
+      </Content>
       <Footer data={footers} />
     </>
   );

@@ -14,16 +14,14 @@ const Portfolio: React.FC<Props> = ({ data }) => {
   const { fields } = (data?.items && useContentfulLiveUpdates(data.items[0])) || {};
 
   return (
-    <section id="portfolio" className={styles.container} data-scroll-section>
-      <div className={styles.filter}>
-        <div>
-          <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#portfolio">
-            {fields?.title}
-          </h1>
-        </div>
-        <div className={styles.wrapper}>
-          <CardsManager data={fields?.references} />
-        </div>
+    <section id="portfolio" className={styles.container}>
+      <div>
+        <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#portfolio">
+          {fields?.title}
+        </h1>
+      </div>
+      <div className={styles.wrapper}>
+        <CardsManager data={fields?.references} />
       </div>
     </section>
   );

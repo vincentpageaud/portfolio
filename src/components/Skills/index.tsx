@@ -47,39 +47,37 @@ const Skills: React.FC<Props> = ({ data }) => {
   }, []);
 
   return (
-    <section ref={containerElmnt} id="skills" className={styles.container} data-scroll-section>
-      <div className={styles.filter}>
-        <h1
-          className={styles.mainTitle}
-          style={{ paddingBottom: isMobileOrTablet ? 0 : 150 }}
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target="#skills"
-        >
-          {fields?.title}
-        </h1>
-        <div className={styles.contentContainer}>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
-            <Summary content={fields?.summary} />
-          </article>
-          <div className={styles.canvasWrapper} data-scroll data-scroll-speed={isLargeScreen ? '3' : '0.5'}>
-            <CanvasWrapper scale={scale} />
-          </div>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
-            <List title="Front End" elements={fields?.frontEndTags || []} />
-          </article>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
-            <List title="Back End" elements={fields?.backEndTags || []} />
-          </article>
-          <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
-            <h1>CV</h1>
-            <a href={fields?.cv?.fields?.file?.url} target="_blank" rel="noreferrer">
-              {fields?.cv?.fields?.title}
-            </a>
-          </article>
+    <section ref={containerElmnt} id="skills" className={styles.container}>
+      <h1
+        className={styles.mainTitle}
+        style={{ paddingBottom: isMobileOrTablet ? 0 : 150 }}
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target="#skills"
+      >
+        {fields?.title}
+      </h1>
+      <div className={styles.contentContainer}>
+        <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
+          <Summary content={fields?.summary} />
+        </article>
+        <div className={styles.canvasWrapper} data-scroll data-scroll-speed={isLargeScreen ? '3' : '0.5'}>
+          <CanvasWrapper scale={scale} />
         </div>
-        <AnimatedWaves />
+        <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
+          <List title="Front End" elements={fields?.frontEndTags || []} />
+        </article>
+        <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
+          <List title="Back End" elements={fields?.backEndTags || []} />
+        </article>
+        <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
+          <h1>CV</h1>
+          <a href={fields?.cv?.fields?.file?.url} target="_blank" rel="noreferrer">
+            {fields?.cv?.fields?.title}
+          </a>
+        </article>
       </div>
+      <AnimatedWaves />
     </section>
   );
 };
