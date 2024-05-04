@@ -30,16 +30,10 @@ const Header: React.FC<Props> = ({ data }) => {
             <div data-scroll data-scroll-speed="1">
               <h1>{fields?.name}</h1>
             </div>
-            <div data-scroll data-scroll-speed="4">
+            <div data-scroll data-scroll-speed="20">
               <h2>{fields?.title}</h2>
             </div>
-            <div
-              className={styles.buttonWrapper}
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed="5"
-              data-scroll-position="left"
-            >
+            <div className={styles.buttonWrapper} data-scroll data-scroll-speed="15" data-scroll-position="left">
               <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
                 {fields?.buttonName}
               </div>

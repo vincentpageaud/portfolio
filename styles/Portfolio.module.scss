@@ -73,23 +73,6 @@
   margin: 0 20px;
   font-size: .9em;
 }
-.isInView .card {
-  animation: 1s anim-lineUp ease-in-out;
-}
-@keyframes anim-lineUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 @media screen and (max-width: 1200px) {
   .mainTitle {
@@ -107,20 +90,5 @@
   }
   .card:first-child {
     margin-top: 0;
-  }
-
-  @keyframes anim-lineUp {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.12);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
   }
 }
