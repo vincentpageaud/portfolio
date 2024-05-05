@@ -15,11 +15,9 @@ const Portfolio: React.FC<Props> = ({ data }) => {
 
   return (
     <section id="portfolio" className={styles.container}>
-      <div>
-        <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#portfolio">
-          {fields?.title}
-        </h1>
-      </div>
+      <h1 className={styles.mainTitle} data-scroll data-scroll-sticky data-scroll-target="#portfolio">
+        {fields?.title}
+      </h1>
       <div className={styles.wrapper}>
         <CardsManager data={fields?.references} />
       </div>

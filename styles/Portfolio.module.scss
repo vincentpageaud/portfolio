@@ -17,7 +17,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  padding-bottom: 5%;
 }
 .wrapper > div {
   will-change: transform;
@@ -29,7 +28,7 @@
 
 .card {
   background-color: rgb(107, 93, 87);
-  margin: 10px 0;
+  margin: 7.5% 0;
   border-radius: 10px;
   overflow: hidden;
   will-change: transform;
@@ -83,12 +82,5 @@
     flex-direction: column;
     width: 80%;
     align-items: center;
-  }
-
-  .card {
-    margin: 25px 0;
-  }
-  .card:first-child {
-    margin-top: 0;
   }
 }
