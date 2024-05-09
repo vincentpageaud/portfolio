@@ -27,7 +27,6 @@
   will-change: transform;
 }
 .text h1{
-  font-family: 'Gloria Hallelujah', cursive;
   font-size: 3em;
   color: var(--main-color);
   margin: 0 4%;
@@ -40,6 +39,9 @@
   padding-bottom: 15%;
   text-transform: uppercase;
   word-wrap: break-word;
+  text-shadow:  0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
 }
 .buttonWrapper {
   margin: 0 auto;
@@ -78,6 +80,7 @@
   border-radius: 50%;
   width: 100%;
   max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 12px, rgba(0, 0, 0, 0.5) 0px 7px 18px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .filter{
   width: 100%;
