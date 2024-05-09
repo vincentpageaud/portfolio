@@ -22,30 +22,28 @@ const Header: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <header id="top" className={styles.background} data-scroll-section>
-      <div className={styles.container}>
-        <LanguageSelector />
-        <div className={styles.wrapper} style={{ height }}>
-          <div className={styles.text}>
-            <div data-scroll data-scroll-speed="1">
-              <h1>{fields?.name}</h1>
-            </div>
-            <div data-scroll data-scroll-speed="20">
-              <h2>{fields?.title}</h2>
-            </div>
-            <div className={styles.buttonWrapper} data-scroll data-scroll-speed="15" data-scroll-position="left">
-              <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
-                {fields?.buttonName}
-              </div>
+    <header id="top" className={styles.container} data-scroll-section>
+      <LanguageSelector />
+      <div className={styles.wrapper} style={{ height }}>
+        <div className={styles.text}>
+          <div data-scroll data-scroll-speed="1">
+            <h1>{fields?.name}</h1>
+          </div>
+          <div data-scroll data-scroll-speed="20">
+            <h2>{fields?.title}</h2>
+          </div>
+          <div className={styles.buttonWrapper} data-scroll data-scroll-speed="15" data-scroll-position="left">
+            <div className={styles.button} onClick={onClick} onKeyDown={() => null} role="button" tabIndex={0}>
+              {fields?.buttonName}
             </div>
           </div>
-          <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
-            <div
-              className={styles.picture}
-              style={{ backgroundImage: `url(https:${fields?.profilePicture?.fields?.file?.url})` }}
-            >
-              <div className={styles.filter} />
-            </div>
+        </div>
+        <div className={styles.pictureWrapper} data-scroll data-scroll-speed="10">
+          <div
+            className={styles.picture}
+            style={{ backgroundImage: `url(https:${fields?.profilePicture?.fields?.file?.url})` }}
+          >
+            <div className={styles.filter} />
           </div>
         </div>
       </div>
