@@ -29,10 +29,31 @@
   will-change: transform;
 }
 .text h1{
-  font-size: 3em;
+  width: max-content;
+  font-size: 1.6em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   color: var(--main-color);
   margin: 0 4%;
   margin-top: 5%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+.text h1 > span {
+  background: linear-gradient(
+    45deg,
+    #1fa4ae 20%,
+    #00affa 30%,
+    #cf590f 70%,
+    #9a71fa 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: text-shine 10s ease-in-out infinite alternate;
 }
 .text h2{
   font-size: 6em;
@@ -41,30 +62,32 @@
   padding-bottom: 15%;
   text-transform: uppercase;
   word-wrap: break-word;
-  text-shadow:  0px 4px 3px rgba(0,0,0,0.4),
-                0px 8px 13px rgba(0,0,0,0.1),
-                0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--text-shadow);
 }
 .buttonWrapper {
   margin: 0 auto;
 }
 .button {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
+  color: #ffffff;
   border-radius: 10px;
   margin: 0 auto;
-  padding: 15px;
+  padding-inline: 20px;
+  padding-top: 15px;
+  padding-bottom: 21px;
   cursor: pointer;
   user-select: none;
   transition: all ease-in-out 0.3s;
   appearance: none;
   outline: none;
+  background-color: var(--main-color);
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
   -webkit-tap-highlight-color: transparent;
 }
-.button:hover {
-  color: #fff;
-  border-color: #fff;
-  opacity: 75%;
+.button:active {
+  margin-top: 2px;
+  padding-bottom: 19px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 12px, rgba(0, 0, 0, 0.4) 0px 7px 18px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
 }
 
 .pictureWrapper{
@@ -82,7 +105,7 @@
   border-radius: 50%;
   width: 100%;
   max-width: 500px;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 12px, rgba(0, 0, 0, 0.5) 0px 7px 18px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: var(--box-shadow);
 }
 .filter{
   width: 100%;
@@ -98,7 +121,7 @@
 }
 @media screen and (max-width: 1200px) {
   .text h1{
-    font-size: 2em;
+    font-size: 1.2em;
   }
   .text h2{
     font-size: 4em;
@@ -161,7 +184,6 @@
     transform: translateY(0%);
   }
 }
-
 @keyframes background-animation {
   0% {
     background-position: 0% 50%;
@@ -171,5 +193,13 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@keyframes text-shine {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
   }
 }

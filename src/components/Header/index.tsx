@@ -28,7 +28,9 @@ const Header: React.FC<Props> = ({ data }) => {
         <div className={styles.wrapper} style={{ height }}>
           <div className={styles.text}>
             <div data-scroll data-scroll-speed="1">
-              <h1>{fields?.name}</h1>
+              <h1>
+                <span>{fields?.name}</span>
+              </h1>
             </div>
             <div data-scroll data-scroll-speed="20">
               <h2>{fields?.title}</h2>
