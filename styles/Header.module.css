@@ -142,14 +142,6 @@
   .picture{
     display: none;
   }
-  .background{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .container{
-    background-color: rgba(53, 45, 42, 0.72);
-  }
   .text h2{
     margin-top: 5%;
   }
