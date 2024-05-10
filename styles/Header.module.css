@@ -76,13 +76,16 @@
   padding-bottom: 21px;
   cursor: pointer;
   user-select: none;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
   appearance: none;
   outline: none;
   background-color: var(--main-color);
   text-shadow: var(--text-shadow);
   box-shadow: var(--box-shadow);
   -webkit-tap-highlight-color: transparent;
+}
+.button:hover {
+  background-color: #8a69d8;
 }
 .button:active {
   margin-top: 2px;
