@@ -3,6 +3,7 @@
   background-color: #185275;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
+  text-shadow: var(--text-shadow);
 }
 .wrapper {
   display: flex;
@@ -60,7 +61,7 @@
   padding-left: 2.5%;
   button {
     margin: 10px 0;
-    margin-right: 10px;
+    margin-right: 15px;
     &:last-child {
       margin-right: 0;
     }

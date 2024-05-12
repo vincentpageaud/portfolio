@@ -10,7 +10,8 @@
   input {
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
+    padding: 13px;
+    padding-top: 10px;
     border-radius: 10px;
     border: none;
     background-color: rgba(255, 255, 255, 0.7);
@@ -19,6 +20,7 @@
     transition: all 0.3s ease-in-out;
     font-size: 1em;
     font-family: var(--font-family);
+    box-shadow: var(--box-shadow);
   }
 }
 
