@@ -31,8 +31,8 @@ const Home: NextPage<Props> = ({ headers, portfolios, skills, footers }) => {
         <meta name="description" content={metaContent} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header data={headers} />
       <Content>
+        <Header data={headers} />
         <Portfolio data={portfolios} />
         <Skills data={skills} />
       </Content>
