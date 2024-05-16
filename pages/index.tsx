@@ -27,7 +27,13 @@ const Home: NextPage<Props> = ({ headers, portfolios, skills, footers }) => {
   return (
     <>
       <Head>
-        <title>Vincent Pageaud | {headers?.items && headers.items[0]?.fields?.title}</title>
+        <title>
+          Vincent Pageaud |
+          {headers?.items &&
+            `${headers.items[0]?.fields?.title && ` ${headers.items[0]?.fields?.title}`}
+            ${headers.items[0]?.fields?.description && `• ${headers.items[0]?.fields?.description}`}
+            `}
+        </title>
         <meta name="description" content={metaContent} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
