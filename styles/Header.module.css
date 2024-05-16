@@ -48,7 +48,7 @@
   animation: text-shine 10s ease-in-out infinite alternate;
 }
 .text h2{
-  font-size: 6em;
+  font-size: 5em;
   margin: 0 10%;
   margin-top: -5%;
   padding-bottom: 15%;
@@ -109,11 +109,6 @@
   background-color: rgba(53, 45, 42, 0.3);
 }
 
-@media screen and (max-width: 1400px) {
-  .text h2{
-    font-size: 5em;
-  }
-}
 @media screen and (max-width: 1200px) {
   .text h1{
     font-size: 1.2em;
