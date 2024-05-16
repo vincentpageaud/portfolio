@@ -47,13 +47,19 @@
   background-size: 500% auto;
   animation: text-shine 10s ease-in-out infinite alternate;
 }
-.text h2{
+.text h2 {
   font-size: 5em;
   margin: 0 10%;
   margin-top: -5%;
-  padding-bottom: 15%;
   text-transform: uppercase;
   word-wrap: break-word;
+  text-shadow: var(--text-shadow);
+}
+.text h3 {
+  margin: 0 10%;
+  padding-bottom: 15%;
+  font-size: 1.8em;
+  font-weight: 400;
   text-shadow: var(--text-shadow);
 }
 .buttonWrapper {
@@ -116,6 +122,9 @@
   .text h2{
     font-size: 4em;
   }
+  .text h3{
+  font-size: 1.5em;
+  }
 }
 @media screen and (max-width: 900px) {
   .text h2{
@@ -125,6 +134,9 @@
 @media screen and (max-width: 800px) {
   .text h2{
     font-size: 3em;
+  }
+  .text h3{
+  font-size: 1.3em;
   }
 }
 @media screen and (max-width: 700px) {
@@ -145,6 +157,7 @@
 
 .text h1,
 .text h2,
+.text h3,
 .button,
 .picture {
   animation: 2s anim-lineUp ease-out;
