@@ -7,8 +7,9 @@ This is a [Vincent Pageaud](https://vincentpageaud.com/) project named **Portfol
 First, run the development server:
 
 ```bash
-npm run dev
-# or
+# Install dependencies
+yarn
+# Run the project in dev mode
 yarn dev
 ```
 
