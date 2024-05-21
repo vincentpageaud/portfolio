@@ -9,21 +9,15 @@ interface Props {
   title?: string;
   url?: string;
   backgroundUrl?: string;
-  variant?: string;
   website?: string;
 }
 
-const CardHeader: React.FC<Props> = ({ git, title, url, backgroundUrl, variant, website }) => {
+const CardHeader: React.FC<Props> = ({ git, title, url, backgroundUrl, website }) => {
   return (
     <header>
       <div className={styles.coverPicture} style={{ backgroundImage: `url(${backgroundUrl})` }}>
         <div className={styles.cardHeader}>
-          <div
-            className={styles.logoWrapper}
-            style={{ borderColor: variant === 'secondary' ? 'var(--secondary-color)' : '' }}
-          >
-            {url && <Image width={110} height={110} src={url} alt={title} />}
-          </div>
+          <div className={styles.logoWrapper}>{url && <Image width={110} height={110} src={url} alt={title} />}</div>
           {<CardSubmenu git={git} website={website} />}
         </div>
       </div>

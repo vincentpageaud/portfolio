@@ -28,7 +28,6 @@ const Card: React.FC<Props> = ({ direction, variant, datas }) => {
           title={title}
           url={logo && `https:${logo.fields?.file?.url}`}
           backgroundUrl={preview && `https:${preview.fields?.file?.url}`}
-          variant={variant}
           git={git}
           website={website}
         />
