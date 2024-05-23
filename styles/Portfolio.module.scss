@@ -36,6 +36,9 @@
   overflow: hidden;
   box-shadow: var(--box-shadow);
   will-change: transform;
+  ul {
+    padding-inline-start: 25px;
+  }
 }
 .cardHeader {
   display: flex;
