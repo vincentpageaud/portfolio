@@ -1,4 +1,3 @@
-
 .container {
   position: relative;
   overflow: hidden;
@@ -49,6 +48,15 @@
 }
 .contentWrapper a:hover {
   color: var(--secondary-color);
+}
+
+.cvWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cvWrapper span {
+  margin-block-end: 3px;
 }
 
 .canvasWrapper {

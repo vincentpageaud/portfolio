@@ -72,9 +72,13 @@ const Skills: React.FC<Props> = ({ data }) => {
         </article>
         <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
           <h1>CV</h1>
-          <a href={fields?.cv?.fields?.file?.url} target="_blank" rel="noreferrer">
-            {fields?.cv?.fields?.title}
-          </a>
+          <div className={styles.cvWrapper}>
+            <span>👉</span>
+            <a href={fields?.cv?.fields?.file?.url} target="_blank" rel="noreferrer">
+              {fields?.cv?.fields?.title}
+            </a>
+            <span>👈</span>
+          </div>
         </article>
       </div>
       <AnimatedWaves />
