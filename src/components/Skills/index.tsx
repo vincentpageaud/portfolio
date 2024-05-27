@@ -68,7 +68,7 @@ const Skills: React.FC<Props> = ({ data }) => {
           <List title="Front End" elements={fields?.frontEndTags || []} />
         </article>
         <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '2' : '0.5'}>
-          <List title="Back End" elements={fields?.backEndTags || []} />
+          <List title="Back End & DevOps" elements={fields?.backEndTags || []} />
         </article>
         <article className={styles.contentWrapper} data-scroll data-scroll-speed={isLargeScreen ? '4' : '0.5'}>
           <h1>CV</h1>
