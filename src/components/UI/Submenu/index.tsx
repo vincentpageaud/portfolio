@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import SubmenuIcon from '@assets/Submenu';
 
-import styles from "@styles/UI/Submenu.module.scss";
+import styles from '@styles/UI/Submenu.module.scss';
 
 const Submenu: React.FC = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,16 +15,13 @@ const Submenu: React.FC = ({ children }) => {
         role="button"
         tabIndex={0}
         onKeyDown={() => null}
+        aria-label="Open submenu"
       >
         <SubmenuIcon />
       </div>
-      {isOpen && (
-        <nav className={styles.submenuWrapper}>
-          {children}
-        </nav>
-      )}
+      {isOpen && <nav className={styles.submenuWrapper}>{children}</nav>}
     </div>
   );
-}
+};
 
 export default Submenu;
