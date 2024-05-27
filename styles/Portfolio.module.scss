@@ -48,6 +48,9 @@
   justify-content: space-between;
   padding-left: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -60px 36px -28px inset;
+  ul {
+    padding-inline-start: 0;
+  }
 }
 .coverPicture {
   background-size: cover;
